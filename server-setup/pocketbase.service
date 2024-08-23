@@ -1,0 +1,16 @@
+[Unit]
+Description = pocketbase
+
+[Service]
+Type           = simple
+User           = root
+Group          = root
+LimitNOFILE    = 4096
+Restart        = always
+RestartSec     = 5s
+StandardOutput = append:/home/marwane/pb/errors.log
+StandardError  = append:/home/marwane/pb/errors.log
+ExecStart      = /home/marwane/pb/pocketbase serve --http="127.0.0.1:8090"
+
+[Install]
+WantedBy = multi-user.target
