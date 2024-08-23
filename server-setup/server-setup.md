@@ -4,14 +4,14 @@ Steps for bootstrapping a digital ocean ubuntu droplet.
 ```
 IMPORTANT -- find and replace user, ip, site information before copying
 
-USER:   marwane
-IP:     68.183.29.138
+USER:   mom
+IP:     147.182.212.248
 DOMAIN: lightclickphoto
 
 ```
 
-ssh root@68.183.29.138
-ssh marwane@68.183.29.138
+ssh root@147.182.212.248
+ssh mom@147.182.212.248
 
 https://lightclickphoto.com/
 https://api.lightclickphoto.com/admin/#
@@ -22,6 +22,7 @@ https://api.lightclickphoto.com/admin/#
 ```
 
 apt upgrade && apt update
+reboot
 apt install nginx
 curl -fsSL https://get.docker.com -o install-docker.sh
 sh install-docker.sh
@@ -32,11 +33,11 @@ sh install-docker.sh
 > Add sudo user. Copy authorized keys from root to login from mac
 ```
 
-adduser marwane 
-usermod -aG sudo marwane 
-mkdir /home/marwane/.ssh
-cp /root/.ssh/authorized_keys /home/marwane/.ssh/
-chown -R marwane:marwane /home/marwane/.ssh
+adduser mom 
+usermod -aG sudo mom 
+mkdir /home/mom/.ssh
+cp /root/.ssh/authorized_keys /home/mom/.ssh/
+chown -R mom:mom /home/mom/.ssh
 
 ```
 
@@ -44,10 +45,10 @@ chown -R marwane:marwane /home/marwane/.ssh
 > Copy pocketbase binary to home directory. Set up system service, and start. 
 ```
 
-mkdir /marwane/home/pb
+mkdir /home/mom/pb
 
-scp ./server-setup/pocketbase.service marwane@68.183.29.138:/lib/systemd/system/
-scp ./server-setup/pocketbase marwane@68.183.29.138:/marwane/home/pb/
+scp ./server-setup/pocketbase.service root@147.182.212.248:/lib/systemd/system/
+scp ./server-setup/pocketbase root@147.182.212.248:/home/mom/pb/
 service pocketbase start
 
 # test for now
@@ -58,22 +59,23 @@ service pocketbase start
 > Visit name cheap and setup domain records to point to server.
 
 Namcheap > Account > Advanced DNS >
- 1. A record > @/68.183.29.138
- 2. A record > www/68.183.29.138
- 3. A record > api/68.183.29.138
+ 1. A record > @/147.182.212.248
+ 2. A record > www/147.182.212.248
+ 3. A record > api/147.182.212.248
 
 #### 5 - Setup nginx
 > Copy config files to sites avaliable, create a temporary key for certbot.
 > Activate config files and restart the service.
 ```
 
-scp ./server-setup/*.conf root@68.183.29.138:/etc/nginx/sites-available
+scp ./server-setup/*.conf root@147.182.212.248:/etc/nginx/sites-available
 
 sudo openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out certificate.pem
+
+sudo rm /etc/nginx/sites-enabled/default
 sudo ln -s /etc/nginx/sites-available/api.conf /etc/nginx/sites-enabled/api.conf
 sudo ln -s /etc/nginx/sites-available/app.conf /etc/nginx/sites-enabled/app.conf
 nginx -t
-service nginx restart
 
 ```
 
