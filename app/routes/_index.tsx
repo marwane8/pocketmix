@@ -11,6 +11,7 @@ export default function Index() {
   return (
     <div className="font-sans p-4">
       <h1 className="text-3xl">Welcome to Light Click Photo</h1>
+      <h1 className="text-3xl">Asalami!</h1>
       <button className="btn btn-accent">Accent</button>
     </div>
   );

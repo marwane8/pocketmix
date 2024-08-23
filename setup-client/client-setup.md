@@ -7,7 +7,7 @@ Prequsites:
 #### Tool Kit
 [dasyui](https://daisyui.com)
 
-[dasyui](https://daisyui.com)
+[cloudflare](https://dash.cloudflare.com)
 
 
 #### 1 - Create remix SPA 
@@ -28,18 +28,18 @@ index.js > add-class, messup structure > reformat document
 > Start remix in SPA mode 
 ```
 npm i -D daisyui@latest
-
-tailwind.config.js > 
-
-module.exports = {
-  //...
-  daisyui: {
-    themes: [],
-  },
-  plugins: [
-    require('daisyui')
-  ],
-}
+cp ./setup-client/tailwind.config.ts ./
 
 ```
+
+#### 4 - Setup cloudflare pages 
+> Set up cloud flare continuous deployment *signin with github email 
+```
+
+Worker Pages > Create > Pages > Connect to git
+> Select Repository > Framework Presets
+
+
+```
+* redploy if it fails the first time
 
