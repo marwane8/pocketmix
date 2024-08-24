@@ -16,7 +16,7 @@ export default function TopNav() {
   return (
     <nav className="flex items-center">
       <div className="w-full flex justify-between">
-        <label className="swap swap-rotate md:hidden w-9 mx-3">
+        <label className="swap swap-rotate md:hidden w-9 ml-3">
           {/* this hidden checkbox controls the state */}
           <input
             type="checkbox"
@@ -29,7 +29,7 @@ export default function TopNav() {
 
         <Link to={"/"} className="px-5 w-full">
           <div
-            className="text-5xl  py-3  text-center md:text-left font-gwendy  text-primary font-extrabold"
+            className="text-4xl  py-3  text-center md:text-left font-gwendy  text-primary font-extrabold"
             onClick={() => handleNavClick("")}
             aria-hidden
           >

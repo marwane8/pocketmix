@@ -1,6 +1,12 @@
 import type { MetaFunction } from "@remix-run/node";
+import Gallery from "~/components/gallery/gallery";
+
 import heroCouple from "~/assets/hill-couple.jpg";
-import Gallery from "~/components/gallery";
+import bagle from "~/assets/bagel.jpg";
+import birdy from "~/assets/bird.jpg";
+import mountain from "~/assets/mountain.jpg";
+
+
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,6 +16,7 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+
   return (
     <div>
       <div
@@ -22,10 +29,7 @@ export default function Index() {
           <span className="font-extrabold italic text-accent">Click. </span>
         </h1>
       </div>
-      <div>
-        Section 2
-        <Gallery/>
-      </div>
+      <Gallery />
     </div>
   );
 }
