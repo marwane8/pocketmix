@@ -42,7 +42,7 @@ export default function GalleryItem({
         className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
       />
       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100">
-        <h3 className="text-white text-xl font-bold">{title.toUpperCase()}</h3>
+        <h3 className="text-white text-xl font-bold tracking-wider">{title.toUpperCase()}</h3>
       </div>
     </div>
   );
