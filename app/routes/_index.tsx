@@ -12,7 +12,7 @@ export default function Index() {
     <div className="font-sans p-4">
       <h1 className="text-3xl">Welcome to Light Click Photo</h1>
       <h1 className="text-9xl font-gwendy  text-primary font-extrabold">Light Click Photo</h1>
-      <h1 className="text-9xl font-playfair text-stone-800 italic font-extrabold">Asalami!</h1>
+      <h1 className="text-9xl font-playfair italic font-extrabold">Asalami!</h1>
       <button className="btn btn-accent bg-accent">Accent</button>
     </div>
   );

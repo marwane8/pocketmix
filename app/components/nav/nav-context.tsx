@@ -1,7 +1,5 @@
 import { createContext, useContext } from "react";
 
-import { DocumentTextIcon, ClipboardDocumentCheckIcon } from "@heroicons/react/24/outline";
-
 type NavContextType = {
   path: string;
   setPath: (path: string) => void;
@@ -21,11 +19,4 @@ export function useNavContext() {
 export const navLinks = [
   { name: "contact" },
   { name: "services"}
-];
-
-export const sideLinks = [
-  { name: "about" },
-  { name: "contact" },
-  { name: "rules", icon: ClipboardDocumentCheckIcon },
-  { name: "registration", icon: DocumentTextIcon },
 ];

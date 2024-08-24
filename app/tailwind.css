@@ -1,6 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dbug {
+  @apply border-2 border-red-500;
+}
+
+.transition-base {
+  @apply transition-all duration-200;
+}
+
+@layer utilities {
+  @keyframes dropIn {
+    0% {
+      transform: translateY(-7px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .animate-drop {
+    animation: dropIn .3s ease-in;
+  }
+}
