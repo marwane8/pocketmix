@@ -23,7 +23,7 @@ export default function Index() {
         style={{ backgroundImage: `url(${heroCouple})` }}
         className="h-[700px] bg-cover bg-no-repeat bg-bottom "
       >
-        <h1 className="text-4xl md:text-5xl h-2/3 px-10 py-24 font-semibold cursor-default  ">
+        <h1 className="text-4xl md:text-5xl h-2/3 px-10 py-24 cursor-default  ">
           Capture Life&apos;s Radiance, <br />
           With a{" "}
           <span className="font-extrabold italic text-accent">Click. </span>

@@ -4,9 +4,10 @@ import birdy from "~/assets/bird.jpg";
 import mountain from "~/assets/mountain.jpg";
 
 import GalleryItem from "./gallery-item";
+import GalleryModal from "./gallery-modal";
 import { GalleryContext } from "./gallery-context";
 import { useState } from "react";
-import ModalGallery from "./modal-gallery";
+
 export default function Gallery() {
   const imageList = [bagle, birdy, mountain];
 
@@ -35,7 +36,7 @@ export default function Gallery() {
             images={imageList}
             title="heros"
           />
-          <ModalGallery initialIndex={0}/>
+          <GalleryModal initialIndex={0}/>
         </GalleryContext.Provider>
       </div>
     </>
