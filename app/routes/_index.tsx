@@ -1,7 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
-
 import heroCouple from "~/assets/hill-couple.jpg";
-import Container from "~/components/container";
+import Gallery from "~/components/gallery";
 
 export const meta: MetaFunction = () => {
   return [
@@ -17,13 +16,15 @@ export default function Index() {
         style={{ backgroundImage: `url(${heroCouple})` }}
         className="h-[700px] bg-cover bg-no-repeat bg-bottom "
       >
-        <Container>
-          <h1 className="text-4xl md:text-5xl h-2/3 px-10 py-32 font-semibold ">
-            Capture Life&apos;s Radiance, <br/>
-            With a{" "}
-            <span className="font-extrabold italic text-accent">Click. </span>
-          </h1>
-        </Container>
+        <h1 className="text-4xl md:text-5xl h-2/3 px-10 py-24 font-semibold cursor-default  ">
+          Capture Life&apos;s Radiance, <br />
+          With a{" "}
+          <span className="font-extrabold italic text-accent">Click. </span>
+        </h1>
+      </div>
+      <div>
+        Section 2
+        <Gallery/>
       </div>
     </div>
   );
