@@ -28,11 +28,12 @@ index.js > add-class, messup structure > reformat document
 
 ```
 
-#### 3 - Add Daisy UI 
+#### 3 - Install UI Librarys
 > Start remix in SPA mode 
 ```
 npm i -D daisyui@latest
-cp ./setup-client/tailwind.config.ts ./
+npm install @heroicons/react
+cp ./setup-client/tw.config.ts ./tailwind.config.ts
 
 ```
 
@@ -59,3 +60,21 @@ Worker Pages > pocketmix > Customdomains:
 
 * redeploy if it fails the first time
 
+
+#### 5 - Add fontfamilies and colors
+> Set up cloud flare continuous deployment *signin with github email 
+```
+From google fonts:
+tailwind.css > @import(...)
+tailwind.config.ts > fontFamily[...]
+
+add theme color ids to:
+
+primary
+accent
+neutral
+base-100
+
+
+
+```

@@ -1,49 +1,27 @@
 # pocketmix 
+Light weight app used for small businesses
 
-## Setup
 
-```shellscript
-npx create-remix@latest --template remix-run/remix/templates/spa
-```
 
-## Development
+LIGHTCLICKPHOTOGRAPHY
 
-You can develop your SPA app just like you would a normal Remix app, via:
+Colors:
+60/20/10
 
-```shellscript
-npm run dev
-```
+#023E7D - blue
+#7CB6B2 - turqoius
+#FFF7D6 - beig
+(coolor pallet)[https://coolors.co/palette/efefd0-1a659e-f0ead6-fafaf0-023e7d-101519-20201d-f3e9d2-dac083-eee0bf]
 
-## Production
+Fonts:
+1 - Display Font (cursive) Gwendolyn
 
-When you are ready to build a production version of your app, `npm run build` will generate your assets and an `index.html` for the SPA.
+2 - Paragraph and Text (formal) Playfair
 
-```shellscript
-npm run build
-```
 
-### Preview
+TODO:
 
-You can preview the build locally with [vite preview](https://vitejs.dev/guide/cli#vite-preview) to serve all routes via the single `index.html` file:
+Setup color theme and typography 
+implement navbar and base pages
+implement home pages
 
-```shellscript
-npm run preview
-```
-
-> [!IMPORTANT]
->
-> `vite preview` is not designed for use as a production server
-
-### Deployment
-
-You can then serve your app from any HTTP server of your choosing. The server should be configured to serve multiple paths from a single root `/index.html` file (commonly called "SPA fallback"). Other steps may be required if the server doesn't directly support this functionality.
-
-For a simple example, you could use [sirv-cli](https://www.npmjs.com/package/sirv-cli):
-
-```shellscript
-npx sirv-cli build/client/ --single
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.

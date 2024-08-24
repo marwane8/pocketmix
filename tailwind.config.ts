@@ -10,21 +10,15 @@ export default {
         "screen-lvh": "100lvh",
       },
       colors: {
-        prime: {
-          "50": "#f0f9f4",
-          "100": "#daf1e4",
-          "200": "#b8e2cc",
-          "300": "#89ccad",
-          "400": "#57b08a",
-          "500": "#35946e",
-          "600": "#28805f",
-          "700": "#1e5e48",
-          "800": "#1a4b3a",
-          "900": "#163e31",
-          "950": "#0b231b",
-        },
+        primary: "#023E7D",
+        neutral: "#FEFDFD",
+        accent: "#7CB6B2 ",
       },
     },
+    fontFamily: {
+      playfair: ["Playfair","system-ui"],
+      gwendy: ["Gwendolyn", "cursive"]
+    }
   },
   daisyui: {
     themes: [],
