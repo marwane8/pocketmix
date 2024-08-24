@@ -30,7 +30,7 @@ export default function TopNav() {
           </div>
           <Link to={"/"} className="w-full">
             <div
-              className="text-5xl  py-3  text-center md:text-left font-gwendy  text-primary font-extrabold"
+              className="text-4xl md:text-5xl  py-3  text-center md:text-left font-gwendy  text-primary font-extrabold"
               onClick={() => setPath("")}
               aria-hidden
             >
