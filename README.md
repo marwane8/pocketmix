@@ -25,3 +25,6 @@ Setup color theme and typography
 implement navbar and base pages
 implement home pages
 
+
+Capture Life's Radiance
+With a Click.

@@ -20,7 +20,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-neutral text-stone-900">
+      <body className="bg-neutral text-stone-900 font-playfair">
         {children}
         <ScrollRestoration />
         <Scripts />

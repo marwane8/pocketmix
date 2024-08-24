@@ -1,5 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
 
+import heroCouple from "~/assets/hill-couple.jpg";
+import Container from "~/components/container";
+
 export const meta: MetaFunction = () => {
   return [
     { title: "New Remix SPA" },
@@ -9,11 +12,19 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="font-sans p-4">
-      <h1 className="text-3xl">Welcome to Light Click Photo</h1>
-      <h1 className="text-9xl font-gwendy  text-primary font-extrabold">Light Click Photo</h1>
-      <h1 className="text-9xl font-playfair italic font-extrabold">Asalami!</h1>
-      <button className="btn btn-accent bg-accent">Accent</button>
+    <div>
+      <div
+        style={{ backgroundImage: `url(${heroCouple})` }}
+        className="h-[700px] bg-cover bg-no-repeat bg-bottom "
+      >
+        <Container>
+          <h1 className="text-4xl md:text-5xl h-2/3 px-10 py-32 font-semibold ">
+            Capture Life&apos;s Radiance, <br/>
+            With a{" "}
+            <span className="font-extrabold italic text-accent">Click. </span>
+          </h1>
+        </Container>
+      </div>
     </div>
   );
 }
