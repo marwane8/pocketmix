@@ -1,5 +1,5 @@
 
 
 export default function Contact() {
-  return <div>Contact Here</div>;
+  return <div className="h-screen" >Contact Here</div>;
 }

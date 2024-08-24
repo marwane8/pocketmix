@@ -40,10 +40,10 @@ export default function App() {
   return (
     <div className="flex h-screen-svh flex-col justify-between">
       <Navbar path={path} />
-      <div className="h-full">
+      <div className="min-h-fit">
         <Outlet />
       </div>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }

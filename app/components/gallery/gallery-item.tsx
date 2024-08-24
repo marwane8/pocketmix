@@ -30,7 +30,7 @@ export default function GalleryItem({
     <div
       ref={ref}
       className={
-        `relative cursor-pointer overflow-hidden transition-opacity duration-500 ease-in-out
+        `relative cursor-pointer transition-opacity duration-500 ease-in-out
         ${className} ${inView ? "opacity-100" : "opacity-0"}`
       }
       onClick={() => handleGalleryClick()}
