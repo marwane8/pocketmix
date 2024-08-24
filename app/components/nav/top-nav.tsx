@@ -21,7 +21,7 @@ export default function TopNav() {
           <input
             type="checkbox"
             checked={open}
-            onClick={() => setOpen(!open)}
+            onChange={() => setOpen(!open)}
           />
           <Bars3Icon className="swap-off w-full" />
           <XMarkIcon className="swap-on w-full" />
@@ -42,7 +42,7 @@ export default function TopNav() {
             <Link key={index} to={`/${item.name}`} prefetch="viewport">
               <li
                 className={classNames(
-                  "py-1 text-xl font-playfair base:font-semibold mx-5 min-w-24 text-center transition-base hover:font-extrabold",
+                  "py-1 text-xl font-playfair font-semibold mx-5 min-w-24 text-center transition-base hover:font-extrabold",
                   item.name === path
                     ? "text-accent font-extrabold underline underline-offset-4"
                     : " hover:text-stone-500"
