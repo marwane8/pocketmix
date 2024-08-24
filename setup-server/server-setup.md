@@ -38,21 +38,14 @@ chown -R mom:mom /home/mom/.ssh
 
 ```
 
-#### 3 - Point domain to server
-> Visit name cheap and setup domain records to point to server.
-
-Namcheap > Account > Advanced DNS >
- 3. A record > admin/174.138.42.1
-
-
 #### 3 - Setup pocketbase
 > Copy pocketbase binary to home directory. Set up system service, and start. 
 ```
 
 mkdir /home/mom/pb
 
-scp ./server/pocketbase.service root@174.138.42.1:/lib/systemd/system/
-scp ./server/pocketbase root@174.138.42.1:/home/mom/pb/
+scp ./setup-server/pocketbase.service root@174.138.42.1:/lib/systemd/system/
+scp ./setup-server/pocketbase root@174.138.42.1:/home/mom/pb/
 service pocketbase start
 
 ```

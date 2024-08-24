@@ -5,15 +5,19 @@ Prequsites:
 
 
 #### Tool Kit
+[cloudflare](https://dash.cloudflare.com)
+
 [dasyui](https://daisyui.com)
 
-[cloudflare](https://dash.cloudflare.com)
 
 
 #### 1 - Create remix SPA 
 > Start remix in SPA mode 
 ```
 npx create-remix@latest --template remix-run/remix/templates/spa
+
+# update dev package.json
+"dev": "remix vite:dev --host --port 3000",
 
 ```
 
@@ -39,7 +43,19 @@ cp ./setup-client/tailwind.config.ts ./
 Worker Pages > Create > Pages > Connect to git
 > Select Repository > Framework Presets
 
+```
+
+#### 5 - Setup cloudflare domain
+> Set up cloud flare continuous deployment *signin with github email 
+```
+
+- add individual domain paths through this path for 
+Worker Pages > pocketmix > Customdomains:
+1. lightclickphoto.com
+2. www.lightclickphoto.com
+3. CNAME: admin/174.138.42.1
 
 ```
-* redploy if it fails the first time
+
+* redeploy if it fails the first time
 

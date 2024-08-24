@@ -10,7 +10,7 @@ Restart        = always
 RestartSec     = 5s
 StandardOutput = append:/home/mom/pb/errors.log
 StandardError  = append:/home/mom/pb/errors.log
-ExecStart      = /home/mom/pb/pocketbase serve admin.lightclickphoto.com 
+ExecStart      = /home/mom/pb/pocketbase serve --http="174.138.42.1:80"
 
 [Install]
 WantedBy = multi-user.target
