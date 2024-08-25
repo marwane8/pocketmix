@@ -46,7 +46,7 @@ export default function App() {
       <div>
         <Outlet />
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
@@ -61,22 +61,30 @@ export function ErrorBoundary() {
   return (
     <>
       <div className="flex h-screen-svh flex-col">
-        <Navbar path=""/>
+        <Navbar path="" />
         <div className="flex h-full w-full">
           <Container className="flex h-fit flex-col rounded-2xl  p-12 text-gray-800">
-            <h1 className="pb-4 text-center text-2xl font-semibold">
-              <span className="text-3xl text-primary">{error.status} </span> <br />
+            <h1 className="pb-2 text-center text-2xl font-semibold">
+              <span className="text-3xl text-primary">{error.status} </span>{" "}
+              <br />
               {error.statusText}
               <br />
             </h1>
-            <h1 className=" text-center text-xl font-semibold">Sorry, something went wrong</h1>
+            {error.status == 404 ? (
+              <h1 className=" text-center text-lg">
+                The page you requested doesn&apos;t exist.
+              </h1>
+            ) : (
+              <h1 className=" text-center text-lg">
+                Sorry, something went wrong
+              </h1>
+            )}
 
-            <h2 className="text-center"> Please return to the homepage and try again. </h2>
             <button
-              onClick={() => navigate(-1)}
-              className="link text-accent font-semibold text-xl m-auto w-32"
+              onClick={() => navigate("/")}
+              className="link text-accent font-semibold text-lg m-auto pb-5 "
             >
-              Go Back
+              Go to the Home Page
             </button>
 
             <div className="collapse m-auto my-2 w-full max-w-screen-lg">
@@ -86,17 +94,20 @@ export function ErrorBoundary() {
               </div>
               <div className="collapse-content m-auto overflow-x-scroll bg-base-200 py-2">
                 {error.data ? (
-                  <pre className="sm:text-md text-sm text-red-600">{error.data}</pre>
+                  <pre className="sm:text-md text-sm text-red-600">
+                    {error.data}
+                  </pre>
                 ) : (
-                  <pre className="sm:text-md text-sm text-red-600">{error.stack}</pre>
+                  <pre className="sm:text-md text-sm text-red-600">
+                    {error.stack}
+                  </pre>
                 )}
               </div>
             </div>
           </Container>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </>
   );
 }
-
