@@ -6,10 +6,13 @@ import {
   Scripts,
   ScrollRestoration,
   useLoaderData,
+  useNavigate,
+  useRouteError,
 } from "@remix-run/react";
 import "./tailwind.css";
 import Navbar from "./components/nav/navbar";
 import Footer from "./components/footer";
+import Container from "./components/container";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -51,3 +54,49 @@ export default function App() {
 export function HydrateFallback() {
   return <p>Loading...</p>;
 }
+
+export function ErrorBoundary() {
+  const error: any = useRouteError();
+  const navigate = useNavigate();
+  return (
+    <>
+      <div className="flex h-screen-svh flex-col">
+        <Navbar path=""/>
+        <div className="flex h-full w-full">
+          <Container className="flex h-fit flex-col rounded-2xl  p-12 text-gray-800">
+            <h1 className="pb-4 text-center text-2xl font-semibold">
+              <span className="text-3xl text-primary">{error.status} </span> <br />
+              {error.statusText}
+              <br />
+            </h1>
+            <h1 className=" text-center text-xl font-semibold">Sorry, something went wrong</h1>
+
+            <h2 className="text-center"> Please return to the homepage and try again. </h2>
+            <button
+              onClick={() => navigate(-1)}
+              className="link text-accent font-semibold text-xl m-auto w-32"
+            >
+              Go Back
+            </button>
+
+            <div className="collapse m-auto my-2 w-full max-w-screen-lg">
+              <input type="checkbox" />
+              <div className="text-md collapse-title w-fit bg-black bg-opacity-5 m-auto pr-4 text-center font-medium">
+                See Error Details
+              </div>
+              <div className="collapse-content m-auto overflow-x-scroll bg-base-200 py-2">
+                {error.data ? (
+                  <pre className="sm:text-md text-sm text-red-600">{error.data}</pre>
+                ) : (
+                  <pre className="sm:text-md text-sm text-red-600">{error.stack}</pre>
+                )}
+              </div>
+            </div>
+          </Container>
+        </div>
+        <Footer/>
+      </div>
+    </>
+  );
+}
+
