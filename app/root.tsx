@@ -38,9 +38,9 @@ export const clientLoader = async ({ request }: ClientLoaderFunctionArgs) => {
 export default function App() {
   const { path } = useLoaderData<typeof clientLoader>();
   return (
-    <div className="flex h-screen-svh flex-col justify-between">
+    <div className="h-screen-svh">
       <Navbar path={path} />
-      <div className="min-h-fit">
+      <div>
         <Outlet />
       </div>
       <Footer/>

@@ -14,9 +14,9 @@ export default function TopNav() {
   };
 
   return (
-    <nav className="flex items-center">
+    <nav className="flex items-center mx-5">
       <div className="w-full flex justify-between">
-        <label className="swap swap-rotate md:hidden w-9 ml-3">
+        <label className="swap swap-rotate md:hidden w-9">
           {/* this hidden checkbox controls the state */}
           <input
             type="checkbox"
@@ -27,7 +27,7 @@ export default function TopNav() {
           <XMarkIcon className="swap-on w-full" />
         </label>
 
-        <Link to={"/"} className="px-5 w-full">
+        <Link to={"/"} className="w-full">
           <div
             className="text-4xl  py-3  text-center md:text-left font-gwendy  text-primary font-extrabold"
             onClick={() => handleNavClick("")}
