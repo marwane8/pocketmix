@@ -23,6 +23,11 @@ export default function Index() {
           <span className="font-extrabold italic text-accent">Click. </span>
         </h1>
       </div>
+      {/* <div className="background-slider h-64 w-full">
+        <div className="overlay text-white flex items-center justify-center h-full">
+          <h1 className="text-3xl">Sliding Backgrounds</h1>
+        </div>
+      </div> */}
       <Gallery />
     </div>
   );

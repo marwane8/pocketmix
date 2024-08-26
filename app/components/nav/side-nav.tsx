@@ -23,10 +23,10 @@ export default function SideNav() {
             <Link key={i} to={`/${item.name}`} prefetch="viewport">
               <div
                 className={classNames(
-                  "py-1 text-2xl font-playfair font-semibold mx-7 transition-base hover:font-extrabold",
+                  "py-1 text-2xl font-playfair mx-7 transition-base hover:font-extrabold",
                   item.name === path
-                    ? "text-accent font-extrabold underline underline-offset-4"
-                    : " text-stone-800  hover:text-stone-500"
+                    ? "text-secondary font-extrabold underline underline-offset-4"
+                    : " text-stone-800  hover:text-stone-600 font-semibold"
                 )}
                 onClick={() => handleNavClick(item.name)}
                 aria-hidden="true"

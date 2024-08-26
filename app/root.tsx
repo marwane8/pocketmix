@@ -43,6 +43,7 @@ export default function App() {
   return (
     <div className="h-screen-svh">
       <Navbar path={path} />
+      <div className="h-20"/> 
       <div>
         <Outlet />
       </div>

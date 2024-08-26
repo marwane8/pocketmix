@@ -10,15 +10,16 @@ export default {
         "screen-lvh": "100lvh",
       },
       colors: {
-        primary: "#023E7D",
+        primary: "#F80005",
+        secondary: "#BA8376",
+        accent: "#FFF4ED",
         neutral: "#FEFDFD",
-        accent: "#7CB6B2 ",
       },
     },
     fontFamily: {
-      playfair: ["Playfair","system-ui"],
-      gwendy: ["Gwendolyn", "cursive"]
-    }
+      playfair: ["Playfair", "system-ui"],
+      gwendy: ["Gwendolyn", "cursive"],
+    },
   },
   daisyui: {
     themes: [],

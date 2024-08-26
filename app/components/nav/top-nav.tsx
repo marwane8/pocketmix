@@ -1,20 +1,40 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "@remix-run/react";
 
+import logo from "~/assets/miloud_logo.png";
 import { classNames } from "~/utils/js.util";
 
 import { navLinks, useNavContext } from "./nav-context";
+import { useEffect, useState } from "react";
 
 export default function TopNav() {
   const { path, setPath, open, setOpen } = useNavContext();
+  const [scroll, setScroll] = useState(false);
 
   const handleNavClick = (name: string) => {
     setPath(name);
     setOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 70) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="flex items-center mx-5">
+    <nav
+      className={`fixed flex items-center h-20 px-5 w-full  bg-neutral transition-all duration-300 z-30  ${
+        scroll && "bg-opacity-70 "
+      }`}
+    >
       <div className="w-full flex justify-between">
         <label className="swap swap-rotate md:hidden w-9">
           {/* this hidden checkbox controls the state */}
@@ -28,13 +48,13 @@ export default function TopNav() {
         </label>
 
         <Link to={"/"} className="w-full">
-          <div
-            className="text-4xl  py-3  text-center md:text-left font-gwendy  text-primary font-extrabold"
+          <img
+            className=" w-40 md:w-44 m-auto md:m-0"
+            src={logo}
+            alt="Miloud Photography Logo"
             onClick={() => handleNavClick("")}
             aria-hidden
-          >
-            Light Click Photo
-          </div>
+          />
         </Link>
 
         <ul className="md:flex items-center w-fit hidden">
@@ -42,10 +62,10 @@ export default function TopNav() {
             <Link key={index} to={`/${item.name}`} prefetch="viewport">
               <li
                 className={classNames(
-                  "py-1 text-xl font-playfair font-semibold mx-5 min-w-24 text-center transition-base hover:font-extrabold",
+                  "py-1 text-xl font-playfair mx-5 min-w-24 text-center transition-base hover:font-extrabold",
                   item.name === path
-                    ? "text-accent font-extrabold underline underline-offset-4"
-                    : " hover:text-stone-500"
+                    ? "text-secondary font-extrabold underline underline-offset-4"
+                    : " hover:text-stone-600 font-semibold"
                 )}
                 onClick={() => handleNavClick(item.name)}
                 aria-hidden="true"
