@@ -23,7 +23,7 @@ export default function ModalGallery({ initialIndex }: GalleryModalProps) {
   };
 
   return (
-    <Modal isVisible={open} onClose={() => setOpen(false)} className="p-4">
+    <Modal isVisible={open} onClose={() => setOpen(false)} className="p-4 z-40">
       <div className="w-full flex max-w-7xl  items-center">
         <button onClick={handlePrevious} className="text-stone-500 transition-base hover:text-stone-200 hover:-translate-y-0.5">
           <ChevronLeftIcon className="mr-3 w-8 sm:w-20" />
