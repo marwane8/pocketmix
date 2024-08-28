@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -28,54 +29,4 @@
   .animate-drop {
     animation: dropIn 0.3s ease-in;
   }
-
-  @keyframes slide {
-    0% {
-      background-image: url("./assets/hill-couple.jpg");
-      opacity: 1;
-    }
-    30% {
-      opacity: 1;
-    }
-    33.33% {
-      opacity: 0;
-    }
-    36.66% {
-      background-image: url("./assets/bird.jpg");
-      opacity: 0;
-    }
-    63.33% {
-      opacity: 1;
-    }
-    66.66% {
-      opacity: 0;
-    }
-    69.99% {
-      background-image: url("./assets/mountain.jpg");
-      opacity: 0;
-    }
-    96.66% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-}
-
-.background-slider {
-  animation: slide 9s infinite ease-in-out;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  width: 100%;
-}
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
 }

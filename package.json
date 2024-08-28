@@ -14,6 +14,7 @@
     "@heroicons/react": "^2.1.5",
     "@remix-run/node": "^2.11.2",
     "@remix-run/react": "^2.11.2",
+    "framer-motion": "^11.3.30",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.13.0"

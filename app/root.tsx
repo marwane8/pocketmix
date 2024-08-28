@@ -83,7 +83,7 @@ export function ErrorBoundary() {
 
             <button
               onClick={() => navigate("/")}
-              className="link text-accent font-semibold text-lg m-auto pb-5 "
+              className="link text-secondary font-semibold text-lg m-auto pb-5 "
             >
               Go to the Home Page
             </button>
