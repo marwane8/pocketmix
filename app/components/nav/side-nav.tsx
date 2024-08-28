@@ -1,7 +1,6 @@
 import { Link } from "@remix-run/react";
 import { classNames } from "~/utils/js.util";
 import { navLinks, useNavContext } from "./nav-context";
-import { useEffect } from "react";
 
 export default function SideNav() {
   const { path, setPath, open, setOpen } = useNavContext();
@@ -11,19 +10,6 @@ export default function SideNav() {
     setOpen(false);
   };
 
-  // Prevent body scroll when the side navigation is open
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-
-    // Cleanup on unmount
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [open]);
   return (
     <div
       className={classNames(
