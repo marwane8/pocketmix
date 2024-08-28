@@ -36,7 +36,7 @@ export default function Hero() {
 
   return (
     <>
-      <div className="h-screen-lvh relative">
+      <div className="h-screen-lvh relative overflow-hidden">
         <div className="h-3/4 bg-black absolute z-10 w-screen bg-opacity-35">
           <div className="text-neutral text-5xl md:text-6xl md:py-10 2xl:text-7xl text-left h-1/5  flex">
             <div className="m-auto w-screen px-5">
