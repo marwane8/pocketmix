@@ -93,7 +93,7 @@ export default function Hero() {
 }
 
 const hero1ImgCSS =
-  "-translate-x-28 w-[1000px] md:w-screen md:translate-x-0 lg:bg-center";
+  "-translate-x-[195px] w-[1000px] md:w-screen md:translate-x-0 lg:bg-center";
 const hero2ImgCSS = "w-screen bg-center 2xl:bg-top";
 const hero3ImgCSS =
   "-translate-x-56 w-[1000px] md:w-screen md:translate-x-0 lg:bg-center";
