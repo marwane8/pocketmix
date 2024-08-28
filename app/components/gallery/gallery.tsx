@@ -16,7 +16,7 @@ export default function Gallery() {
 
   return (
     <>
-      <div className="grid gap-5 min-h-[1000px] grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 grid-rows-12 p-5 max-w-screen-xl m-auto">
+      <div className="grid gap-5 min-h-[1000px] grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 grid-rows-12 p-5">
         <GalleryContext.Provider
           value={{
             imageList: images,

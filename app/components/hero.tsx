@@ -18,8 +18,7 @@ export default function Hero() {
     if (newStage >= images.length) {
       newStage = 0;
     }
-    //setStage(newStage);
-    setStage(0);
+    setStage(newStage);
   }
 
   useEffect(() => {
@@ -62,7 +61,7 @@ export default function Hero() {
                   </motion.h1>
                 </AnimatePresence>
                 <h1 className="text-right m-auto font-semibold flex translate-y-2">
-                  <p className="opacity-0 w-[200px] md:w-[275px] bg-primary">
+                  <p className="opacity-0 w-[200px] md:w-[240px] bg-primary">
                     {words[stage]}
                   </p>
                   Moments

@@ -57,11 +57,12 @@ DONE:
 - Set transitioning heros from 3 main photos
 - Create a 3 image portfolio - TOOK 2 DAYS!!
   * fix the gallery to look good
+- fix mobile heading on scroll, create transparent heading on scroll
 
 
 TODO:
 Complete Home page:
-- fix mobile heading on scroll, create transparent heading on scroll
+
 - set up home grid with 7 photos:
     * expand grid to fill screen
 
