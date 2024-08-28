@@ -52,17 +52,20 @@ Growing business:
 - Weddings, Sweet 16s, Baby Showers, and Weddings. 
 - But Sell his day to day work.
 
-TODO:
-Complete Home page:
+DONE:
 - Re adjust home font and logo color
 - Set transitioning heros from 3 main photos
+- Create a 3 image portfolio - TOOK 2 DAYS!!
+  * fix the gallery to look good
+
+
+TODO:
+Complete Home page:
 - fix mobile heading on scroll, create transparent heading on scroll
 - set up home grid with 7 photos:
     * expand grid to fill screen
 
 
-- Create a 3 image portfolio - 
-  * fix the gallery to look good
 ------ CHECK POINT
 - Update contact with photo, and proper dates
 - Re Design services page
