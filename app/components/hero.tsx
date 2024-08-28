@@ -8,7 +8,7 @@ import { classNames } from "~/utils/js.util";
 
 export default function Hero() {
   const images = [hero1, hero2, hero3];
-  const words = ["Radiant", "Mystical", "Aspirational"];
+  const words = ["Radiant", "Elegant", "Timeless"];
 
   const [stage, setStage] = useState(0);
   const STAGE_TIME = 20; // seconds for each slide
@@ -36,76 +36,64 @@ export default function Hero() {
 
   return (
     <>
-      <div className="bg-black relative max-w-screen-2xl m-auto">
-        <div className="absolute h-full z-20 w-full flex flex-col justify-around px-10 py-0 ">
-          <motion.h1
-            animate={{
-              color: ["#e7e5e4", "#e7e5e4", "#0c0a09", "#0c0a09"],
-            }}
-            transition={{
-              times: [0, 0.66, 0.7, 1],
-              duration: STAGE_TIME * 3,
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
-            className="z-20 w-full font-semibold text-4xl md:text-6xl text-white"
-          >
-            Capture Life&apos;s
-          </motion.h1>
-
-          <div className="z-20 w-full text-xl text-right h-2/5 relative">
-            <AnimatePresence>
-              <motion.h1
-                variants={slideVariant}
-                key={images[stage]}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                transition={{ duration: 3 }}
-                className={classNames(
-                  "absolute w-full",
-                  stage == 0 &&
-                    "text-amber-400 font-spectral text-5xl md:translate-y-4 md:-translate-x-16 lg:-translate-x-32 md:text-6xl lg:text-7xl font-semibold",
-                  stage == 1 &&
-                    "text-rose-600 text-left font-gwendy text-6xl translate-y-7  md:text-7xl lg:text-8xl font-extrabold bottom-0 md:px-9",
-                  stage == 2 &&
-                    "text-fuchsia-400 font-josefin text-4xl  md:text-7xl lg:text-7xl font-extrabold md:px-9"
-                )}
-              >
-                {words[stage]}
-              </motion.h1>
-            </AnimatePresence>
+      <div className="h-screen-lvh relative">
+        <div className="h-3/4 bg-black absolute z-10 w-screen bg-opacity-35">
+          <div className="text-neutral text-5xl md:text-6xl md:py-10 2xl:text-7xl text-left h-1/5  flex">
+            <div className="m-auto w-screen px-5">
+              <h1 className="  m-auto font-semibold">Capture Life&apos;s </h1>
+              <div className="relative w-fit flex">
+                <AnimatePresence>
+                  <motion.h1
+                    variants={slideVariant}
+                    key={images[stage]}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    transition={{ duration: 3 }}
+                    className={classNames(
+                      "absolute font-gwendy font-extrabold text-6xl md:text-7xl 2xl:translate-y-2",
+                      stage == 0 && " text-[#E6D3BF] translate-x-12",
+                      stage == 1 && " text-primary translate-x-16",
+                      stage == 2 && " text-[#F560A4] translate-x-14"
+                    )}
+                  >
+                    {words[stage]}
+                  </motion.h1>
+                </AnimatePresence>
+                <h1 className="text-right m-auto font-semibold flex translate-y-2">
+                  <p className="opacity-0 w-[250px] md:w-[295px] bg-primary">
+                    {words[stage]}
+                  </p>
+                  Moments
+                </h1>
+              </div>
+            </div>
           </div>
-
-          <motion.h1
-            animate={{
-              color: ["#e7e5e4", "#e7e5e4", "#0c0a09", "#0c0a09"],
-            }}
-            transition={{
-              times: [0, 0.66, 0.7, 1],
-              duration: STAGE_TIME * 3,
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
-            className="z-20 w-full font-semibold text-4xl md:text-6xl text-white text-right"
-          >
-            Moments
-          </motion.h1>
         </div>
         <AnimatePresence>
-          <motion.img
+          <motion.div
             variants={slideVariant}
             key={images[stage]}
-            src={images[stage]}
             initial="hidden"
             animate="visible"
             exit="hidden"
+            style={{ backgroundImage: `url(${images[stage]})` }}
             transition={{ duration: 3 }}
-            className="absolute w-screen"
+            className={classNames(
+              "absolute overflow-visible h-3/4 bg-cover bg-no-repeat",
+              stage == 0 && hero1ImgCSS,
+              stage == 1 && hero2ImgCSS,
+              stage == 2 && hero3ImgCSS
+            )}
           />
         </AnimatePresence>
-        <img src={hero1} alt="" className="opacity-0 w-full" />
       </div>
     </>
   );
 }
+
+const hero1ImgCSS =
+  "-translate-x-28 w-[1000px] md:w-screen md:translate-x-0 lg:bg-center";
+const hero2ImgCSS = "w-screen bg-center 2xl:bg-top";
+const hero3ImgCSS =
+  "-translate-x-56 w-[1000px] md:w-screen md:translate-x-0 lg:bg-center";
