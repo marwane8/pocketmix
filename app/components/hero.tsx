@@ -18,7 +18,8 @@ export default function Hero() {
     if (newStage >= images.length) {
       newStage = 0;
     }
-    setStage(newStage);
+    //setStage(newStage);
+    setStage(0);
   }
 
   useEffect(() => {
@@ -38,7 +39,7 @@ export default function Hero() {
     <>
       <div className="h-screen-svh relative overflow-hidden">
         <div className="h-full bg-black absolute z-10 w-screen bg-opacity-35">
-          <div className="text-neutral text-5xl md:text-6xl md:py-10 2xl:text-7xl text-left h-1/5  flex">
+          <div className="text-neutral text-[2.3em] md:text-6xl md:py-10 2xl:text-7xl text-left h-1/6  flex">
             <div className="m-auto w-screen px-5">
               <h1 className="  m-auto font-semibold">Capture Life&apos;s </h1>
               <div className="relative w-fit flex">
@@ -52,16 +53,16 @@ export default function Hero() {
                     transition={{ duration: 3 }}
                     className={classNames(
                       "absolute font-gwendy font-extrabold text-6xl md:text-7xl 2xl:translate-y-2",
-                      stage == 0 && " text-[#D39470] translate-x-8",
-                      stage == 1 && " text-primary translate-x-12",
-                      stage == 2 && " text-[#F560A4] translate-x-10"
+                      stage == 0 && " text-[#D39470] translate-x-1",
+                      stage == 1 && " text-primary translate-x-5",
+                      stage == 2 && " text-[#F560A4] translate-x-3"
                     )}
                   >
                     {words[stage]}
                   </motion.h1>
                 </AnimatePresence>
                 <h1 className="text-right m-auto font-semibold flex translate-y-2">
-                  <p className="opacity-0 w-[230px] md:w-[275px] bg-primary">
+                  <p className="opacity-0 w-[200px] md:w-[275px] bg-primary">
                     {words[stage]}
                   </p>
                   Moments
@@ -93,7 +94,7 @@ export default function Hero() {
 }
 
 const hero1ImgCSS =
-  "-translate-x-[195px] w-[1000px] md:w-screen md:translate-x-0 lg:bg-center";
+  "-translate-x-[230px] w-[1000px] md:w-screen md:translate-x-0 lg:bg-center";
 const hero2ImgCSS = "w-screen bg-center 2xl:bg-top";
 const hero3ImgCSS =
   "-translate-x-56 w-[1000px] md:w-screen md:translate-x-0 lg:bg-center";
