@@ -69,7 +69,7 @@ export default function Hero() {
                   stage == 1 &&
                     "text-rose-600 text-left font-gwendy text-6xl translate-y-7  md:text-7xl lg:text-8xl font-extrabold bottom-0 md:px-9",
                   stage == 2 &&
-                    "text-fuchsia-400 font-josefin text-5xl  md:text-7xl lg:text-7xl font-extrabold md:px-9"
+                    "text-fuchsia-400 font-josefin text-4xl  md:text-7xl lg:text-7xl font-extrabold md:px-9"
                 )}
               >
                 {words[stage]}
