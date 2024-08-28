@@ -52,16 +52,16 @@ export default function Hero() {
                     transition={{ duration: 3 }}
                     className={classNames(
                       "absolute font-gwendy font-extrabold text-6xl md:text-7xl 2xl:translate-y-2",
-                      stage == 0 && " text-[#D39470] translate-x-10",
-                      stage == 1 && " text-primary translate-x-14",
-                      stage == 2 && " text-[#F560A4] translate-x-12"
+                      stage == 0 && " text-[#D39470] translate-x-8",
+                      stage == 1 && " text-primary translate-x-12",
+                      stage == 2 && " text-[#F560A4] translate-x-10"
                     )}
                   >
                     {words[stage]}
                   </motion.h1>
                 </AnimatePresence>
                 <h1 className="text-right m-auto font-semibold flex translate-y-2">
-                  <p className="opacity-0 w-[240px] md:w-[295px] bg-primary">
+                  <p className="opacity-0 w-[230px] md:w-[275px] bg-primary">
                     {words[stage]}
                   </p>
                   Moments
