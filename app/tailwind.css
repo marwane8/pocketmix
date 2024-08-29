@@ -16,15 +16,17 @@
 @layer utilities {
   @keyframes dropIn {
     0% {
-      transform: translateY(-7px);
+      opacity: 0;
+      transform: translateY(70px);
     }
 
     100% {
-      transform: translateY(0);
+      opacity: 1;
+      transform: translateY(80px);
     }
   }
 
   .animate-drop {
-    animation: dropIn 0.3s ease-in;
+    animation: dropIn 0.3s ease forwards;
   }
 }

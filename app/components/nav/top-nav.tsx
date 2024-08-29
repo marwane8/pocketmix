@@ -12,8 +12,13 @@ export default function TopNav() {
   const [scroll, setScroll] = useState(false);
 
   const handleNavClick = (name: string) => {
-    setPath(name);
+    document.body.style.overflow = ""; //Stop scrolling
     setOpen(false);
+    setPath(name);
+  };
+
+  const toggleSideMenu = () => {
+    setOpen(!open);
   };
 
   useEffect(() => {
@@ -38,11 +43,7 @@ export default function TopNav() {
       <div className="w-full flex justify-between">
         <label className="swap swap-rotate md:hidden w-9">
           {/* this hidden checkbox controls the state */}
-          <input
-            type="checkbox"
-            checked={open}
-            onChange={() => setOpen(!open)}
-          />
+          <input type="checkbox" checked={open} onChange={toggleSideMenu} />
           <Bars3Icon className="swap-off w-full" />
           <XMarkIcon className="swap-on w-full" />
         </label>
@@ -59,7 +60,11 @@ export default function TopNav() {
 
         <ul className="md:flex items-center w-fit hidden">
           {navLinks.map((item, index) => (
-            <Link key={index} to={`/${item.name}`} prefetch="viewport">
+            <Link
+              key={index}
+              to={item.link ? `${item.link}` : `/${item.name}`}
+              prefetch="viewport"
+            >
               <li
                 className={classNames(
                   "py-1 text-xl font-playfair mx-5 min-w-24 text-center transition-base hover:font-extrabold",
@@ -67,7 +72,7 @@ export default function TopNav() {
                     ? "text-secondary font-extrabold underline underline-offset-4"
                     : " hover:text-stone-600 font-semibold"
                 )}
-                onClick={() => handleNavClick(item.name)}
+                onClick={async () => await handleNavClick(item.name)}
                 aria-hidden="true"
               >
                 {item.name.toUpperCase()}

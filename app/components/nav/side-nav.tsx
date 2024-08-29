@@ -13,14 +13,18 @@ export default function SideNav() {
   return (
     <div
       className={classNames(
-        "w-full z-20 bg-neutral h-screen-svh md:hidden",
+        "w-full z-20 bg-neutral h-screen md:hidden",
         open ? "fixed" : "hidden"
       )}
     >
-      <ul className="p-2 h-80 flex flex-col justify-center animate-drop">
+      <ul className="p-2 h-80 translate-y-20 flex flex-col justify-center animate-drop" >
         {navLinks.map((item, i) => (
           <li key={i} className="py-1 text-center my-3">
-            <Link key={i} to={`/${item.name}`} prefetch="viewport">
+            <Link
+              key={i}
+              to={item.link ? `${item.link}` : `/${item.name}`}
+              prefetch="viewport"
+            >
               <div
                 className={classNames(
                   "py-1 text-2xl font-playfair mx-7 transition-base hover:font-extrabold",

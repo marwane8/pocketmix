@@ -17,6 +17,8 @@ export function useNavContext() {
 }
 
 export const navLinks = [
+  { name: "home", link: "/"},
+  { name: "portfolio"},
   { name: "services"},
   { name: "about" }
 ];
