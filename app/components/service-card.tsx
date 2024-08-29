@@ -14,11 +14,13 @@ export default function ServiceCard({
 }: ServiceCardProps) {
   return (
     <div className="border bg-accent h-full border-secondary p-5 gap-8 items-center sm:w-[500px] m-auto">
-      <h3 className="text-3xl font-semibold tracking-wide">
-        {title.toUpperCase()}
-      </h3>
+      <div className="h-1/6 flex items-center">
+        <h3 className="text-3xl font-semibold tracking-wide">
+          {title.toUpperCase()}
+        </h3>
+      </div>
 
-      <div className="flex">
+      <div className="flex h-5/6">
         <div className="flex flex-col justify-evenly">
           <h3 className="text-3xl font-bold">$ {price}</h3>
           {featureList && (
