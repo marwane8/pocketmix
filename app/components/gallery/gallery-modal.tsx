@@ -6,11 +6,11 @@ import {
   ChevronRightIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function ModalGallery() {
-  const { open, setOpen, imageList } = useGalleryContext();
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const { open, setOpen, imageList, currentIndex, setCurrentIndex } =
+    useGalleryContext();
 
   const handleNext = () => {
     const nextIndex = (currentIndex + 1) % imageList.length;
@@ -64,7 +64,7 @@ export default function ModalGallery() {
           initial="hidden"
           animate="visible"
           exit="hidden"
-          transition={{ duration: 1.25, times: [0, 0.25, 0.75, 1] }}
+          transition={{ duration: 1.5, times: [0, 0.25, 0.75, 1] }}
           className="h-full absolute object-contain w-full  transition-all duration-100"
         />
       </div>
