@@ -29,7 +29,7 @@ export default function ModalGallery() {
 
   const slideVariant = {
     visible: { opacity: [0, 0, 1, 1] },
-    hidden: { opacity: [1, 0, 0, 0] },
+    hidden: { opacity: [1, 1, 0, 0] },
   };
 
   return (
@@ -56,7 +56,7 @@ export default function ModalGallery() {
           <ChevronRightIcon className="hidden md:block text-stone-200 p-2 bg-gray-100 w-14 bg-opacity-40 hover:bg-opacity-60 transition duration-150 ease-in rounded-full mx-3" />
         </button>
 
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           <motion.img
             variants={slideVariant}
             key={imageList[currentIndex]}
