@@ -30,7 +30,7 @@ PORTFOLIO
 SERVICES
 - Design and create break downs
 
-CONTACT
+ABOUT
 - Add porfolio cover photo
 - And poster
 
@@ -57,11 +57,11 @@ DONE:
 - fix mobile heading on scroll, create transparent heading on scroll
 - set up home grid with 7 photos:
     * expand grid to fill screen
+- fix modal gallery logic - TOOK 3 HOURS FICKERING BUG
 
 
 TODO:
 Complete Home page:
-- fix modal gallery logic
 
 ------ CHECK POINT
 - Update contact with photo, and proper dates

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Modal from "../modal";
 import { useGalleryContext } from "./gallery-context";
 import {

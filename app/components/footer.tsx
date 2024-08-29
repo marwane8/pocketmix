@@ -13,8 +13,7 @@ export default function Footer() {
           />
 
           <p className="cursor-default">
-            {" "}
-            &copy; Copyright 1976 Miloud Photography{" "}
+            &copy; Copyright 1977 Miloud Photography
           </p>
         </div>
       </Container>

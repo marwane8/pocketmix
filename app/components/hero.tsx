@@ -55,7 +55,7 @@ export default function Hero() {
                       "absolute font-gwendy font-extrabold text-6xl md:text-7xl 2xl:translate-y-2",
                       stage == 0 && " text-[#D39470] translate-x-1",
                       stage == 1 && " text-primary translate-x-5",
-                      stage == 2 && " text-[#F560A4] translate-x-3"
+                      stage == 2 && " text-[#fd92d7] translate-x-3"
                     )}
                   >
                     {words[stage]}

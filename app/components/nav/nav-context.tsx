@@ -17,6 +17,6 @@ export function useNavContext() {
 }
 
 export const navLinks = [
-  { name: "contact" },
-  { name: "services"}
+  { name: "services"},
+  { name: "about" }
 ];
