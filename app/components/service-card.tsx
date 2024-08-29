@@ -13,7 +13,7 @@ export default function ServiceCard({
   image,
 }: ServiceCardProps) {
   return (
-    <div className="border bg-accent h-full border-secondary p-5 gap-8 items-center w-[400px] sm:w-[500px] m-auto">
+    <div className="border bg-accent h-full border-secondary p-5 gap-8 items-center sm:w-[500px] m-auto">
       <h3 className="text-3xl font-semibold tracking-wide">
         {title.toUpperCase()}
       </h3>
