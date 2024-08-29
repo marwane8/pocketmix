@@ -15,6 +15,7 @@ export default function Gallery() {
 
   const [isModalOpen, setModalOpen] = useState(false);
   const [images, setImageList] = useState<string[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(1);
 
   return (
     <>
@@ -25,49 +26,51 @@ export default function Gallery() {
             setImagesList: setImageList,
             open: isModalOpen,
             setOpen: setModalOpen,
+            currentIndex,
+            setCurrentIndex,
           }}
         >
           <GalleryItem
             className="bg-accent row-span-8"
             face={bride1}
             images={imageList}
-            title=""
+            imageIndex={0}
           />
           <GalleryItem
             className="bg-accent row-span-3"
             face={ring}
             images={imageList}
-            title=""
+            imageIndex={5}
           />
 
           <GalleryItem
             className="bg-accent row-span-3"
             face={shoe2}
             images={imageList}
-            title=""
+            imageIndex={4}
           />
 
           <GalleryItem
             className="bg-accent row-span-8"
             face={bride3}
             images={imageList}
-            title=""
+            imageIndex={1}
           />
 
           <GalleryItem
             className="bg-accent row-span-8"
             face={bride4}
             images={imageList}
-            title="heros"
+            imageIndex={2}
           />
 
           <GalleryItem
             className="bg-accent row-span-2"
             face={shoe1}
             images={imageList}
-            title="heros"
+            imageIndex={3}
           />
-          <GalleryModal initialIndex={1} />
+          <GalleryModal />
         </GalleryContext.Provider>
       </div>
     </>

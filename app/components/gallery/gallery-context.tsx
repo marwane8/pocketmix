@@ -5,6 +5,8 @@ type GalleryContextType = {
   setImagesList: (images: string[]) => void;
   open: boolean;
   setOpen: (isOpen: boolean) => void;
+  currentIndex: number;
+  setCurrentIndex: (index: number) => void;
 };
 
 export const GalleryContext = createContext<GalleryContextType | null>(null);
@@ -12,7 +14,9 @@ export const GalleryContext = createContext<GalleryContextType | null>(null);
 export function useGalleryContext() {
   const context = useContext(GalleryContext);
   if (!context) {
-    throw new Error("useGalleryContext must be used within a NavContextProvider");
+    throw new Error(
+      "useGalleryContext must be used within a NavContextProvider"
+    );
   }
   return context;
 }

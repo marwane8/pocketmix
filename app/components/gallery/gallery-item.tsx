@@ -3,22 +3,27 @@ import { useGalleryContext } from "./gallery-context";
 
 type GalleryItemProps = {
   face: string;
-  title: string;
+  title?: string;
   images: string[]; // Add this prop to handle the gallery images
   className?: string;
+  imageIndex?: number;
 };
 
 export default function GalleryItem({
   face,
   title,
   images,
+  imageIndex,
   className,
 }: GalleryItemProps) {
-  const { setOpen, setImagesList } = useGalleryContext();
+  const { setOpen, setImagesList, setCurrentIndex } = useGalleryContext();
 
   const handleGalleryClick = () => {
     document.body.style.overflow = "hidden"; //Stop scrolling
     setImagesList(images);
+    if (imageIndex != null) {
+      setCurrentIndex(imageIndex);
+    }
     setOpen(true);
   };
 
@@ -43,7 +48,7 @@ export default function GalleryItem({
       />
       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100">
         <h3 className="text-white text-xl font-bold tracking-wider">
-          {title.toUpperCase()}
+          {title && title.toUpperCase()}
         </h3>
       </div>
     </div>

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Modal from "../modal";
 import { useGalleryContext } from "./gallery-context";
 import {
@@ -8,23 +7,18 @@ import {
 } from "@heroicons/react/24/outline";
 import { AnimatePresence, motion } from "framer-motion";
 
-type GalleryModalProps = {
-  initialIndex: number;
-};
-
-export default function ModalGallery({ initialIndex }: GalleryModalProps) {
-  const { open, setOpen, imageList } = useGalleryContext();
-
-  const [currentIndex, setCurrentIndex] = useState(initialIndex);
+export default function ModalGallery() {
+  const { open, setOpen, imageList, currentIndex, setCurrentIndex } =
+    useGalleryContext();
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % imageList.length);
+    const nextIndex = (currentIndex + 1) % imageList.length;
+    setCurrentIndex(nextIndex);
   };
 
   const handlePrevious = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + imageList.length) % imageList.length
-    );
+    const prevIndex = (currentIndex - 1 + imageList.length) % imageList.length;
+    setCurrentIndex(prevIndex);
   };
 
   const closeModalGallery = () => {
