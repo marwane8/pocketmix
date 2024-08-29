@@ -62,6 +62,7 @@ export default function ModalGallery() {
             key={imageList[currentIndex]}
             src={imageList[currentIndex]}
             alt={`${currentIndex + 1}`}
+            initial="hidden"
             animate="visible"
             exit="hidden"
             transition={{ duration: 1.25, times: [0, 0.25, 0.75, 1] }}
