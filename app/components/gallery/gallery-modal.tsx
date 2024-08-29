@@ -27,8 +27,10 @@ export default function ModalGallery() {
   };
 
   const slideVariant = {
+    first: { opacity: [0, 0, 0, 0] },
     visible: { opacity: [0, 0, 1, 1] },
-    hidden: { opacity: [1, 0, 0, 0] },
+    hidden: { opacity: [1, 1, 0, 0] },
+    last: { opacity: [0, 0, 0, 0] },
   };
 
   return (
@@ -61,8 +63,9 @@ export default function ModalGallery() {
             key={imageList[currentIndex]}
             src={imageList[currentIndex]}
             alt={`${currentIndex + 1}`}
+            initial="first"
             animate="visible"
-            exit="hidden"
+            exit="last"
             transition={{ duration: 1.5, times: [0, 0.25, 0.75, 1] }}
             className="h-full absolute object-contain w-full  transition-all duration-100"
           />
