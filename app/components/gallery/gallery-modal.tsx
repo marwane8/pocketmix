@@ -56,19 +56,17 @@ export default function ModalGallery() {
           <ChevronRightIcon className="hidden md:block text-stone-200 p-2 bg-gray-100 w-14 bg-opacity-40 hover:bg-opacity-60 transition duration-150 ease-in rounded-full mx-3" />
         </button>
 
-        <AnimatePresence mode="wait">
-          <motion.img
-            variants={slideVariant}
-            key={imageList[currentIndex]}
-            src={imageList[currentIndex]}
-            alt={`${currentIndex + 1}`}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            transition={{ duration: 1.25, times: [0, 0.25, 0.75, 1] }}
-            className="h-full absolute object-contain w-full  transition-all duration-100"
-          />
-        </AnimatePresence>
+        <motion.img
+          variants={slideVariant}
+          key={imageList[currentIndex]}
+          src={imageList[currentIndex]}
+          alt={`${currentIndex + 1}`}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          transition={{ duration: 1.25, times: [0, 0.25, 0.75, 1] }}
+          className="h-full absolute object-contain w-full  transition-all duration-100"
+        />
       </div>
     </Modal>
   );
