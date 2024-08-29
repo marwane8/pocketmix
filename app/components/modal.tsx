@@ -18,7 +18,7 @@ export default function Modal({ isVisible, onClose, className, children }: Props
 
   return (
     <div
-      className={`fixed inset-0 z-20 flex items-center justify-center bg-black bg-opacity-80 backdrop-blur-lg ${className}`}
+      className={`fixed inset-0 z-20 flex items-center justify-center bg-black bg-opacity-90 backdrop-blur-lg ${className}`}
       aria-hidden={true}
       id="wrapper"
       onClick={handleClose}

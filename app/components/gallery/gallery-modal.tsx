@@ -1,7 +1,12 @@
 import { useState } from "react";
 import Modal from "../modal";
 import { useGalleryContext } from "./gallery-context";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
+import { AnimatePresence, motion } from "framer-motion";
 
 type GalleryModalProps = {
   initialIndex: number;
@@ -22,24 +27,52 @@ export default function ModalGallery({ initialIndex }: GalleryModalProps) {
     );
   };
 
+  const closeModalGallery = () => {
+    document.body.style.overflow = ""; //Enable scrolling
+    setOpen(false);
+  };
+
+  const slideVariant = {
+    visible: { opacity: [0, 0, 1, 1] },
+    hidden: { opacity: [1, 0, 0, 0] },
+  };
+
   return (
-    <Modal isVisible={open} onClose={() => setOpen(false)} className="p-4 z-40">
-      <div className="w-full flex max-w-7xl  items-center">
-        <button onClick={handlePrevious} className="text-stone-500 transition-base hover:text-stone-200 hover:-translate-y-0.5">
-          <ChevronLeftIcon className="mr-3 w-8 sm:w-20" />
+    <Modal
+      isVisible={open}
+      onClose={closeModalGallery}
+      className="z-40 flex flex-col"
+    >
+      <button onClick={closeModalGallery}>
+        <XMarkIcon className="fixed top-0 right-0 text-neutral w-10  m-5" />
+      </button>
+
+      <div className=" relative h-4/5 w-screen">
+        <button
+          className="absolute  h-full w-1/2 z-10"
+          onClick={handlePrevious}
+        >
+          <ChevronLeftIcon className="hidden md:block text-stone-200 p-2 bg-gray-100 w-14 bg-opacity-40 hover:bg-opacity-60 transition duration-150 ease-in rounded-full mx-3" />
+        </button>
+        <button
+          className="absolute  h-full w-1/2 translate-x-[100%] z-10 flex justify-end items-center"
+          onClick={handleNext}
+        >
+          <ChevronRightIcon className="hidden md:block text-stone-200 p-2 bg-gray-100 w-14 bg-opacity-40 hover:bg-opacity-60 transition duration-150 ease-in rounded-full mx-3" />
         </button>
 
-        <div className=" bg-white p-3 sm:p-6 rounded-lg shadow-lg max-h-screen">
-          <img
+        <AnimatePresence>
+          <motion.img
+            variants={slideVariant}
+            key={imageList[currentIndex]}
             src={imageList[currentIndex]}
             alt={`${currentIndex + 1}`}
-            className="h-screen object-contain rounded-lg"
+            animate="visible"
+            exit="hidden"
+            transition={{ duration: 1.5, times: [0, 0.25, 0.75, 1] }}
+            className="h-full absolute object-contain w-full  transition-all duration-100"
           />
-        </div>
-
-        <button onClick={handleNext} className="text-stone-500 transition-base hover:text-stone-200 hover:-translate-y-0.5">
-          <ChevronRightIcon className="w-8 ml-3 sm:w-20" />
-        </button>
+        </AnimatePresence>
       </div>
     </Modal>
   );

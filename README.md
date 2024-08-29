@@ -16,9 +16,6 @@ Discrete Palette
 #BA8376 - tan 
 #4A271E - maroon
 
-
-
-
 onts:
 1 - Display Font (cursive) Gwendolyn
 2 - Paragraph and Text (formal) Playfair
@@ -58,14 +55,13 @@ DONE:
 - Create a 3 image portfolio - TOOK 2 DAYS!!
   * fix the gallery to look good
 - fix mobile heading on scroll, create transparent heading on scroll
+- set up home grid with 7 photos:
+    * expand grid to fill screen
 
 
 TODO:
 Complete Home page:
-
-- set up home grid with 7 photos:
-    * expand grid to fill screen
-
+- fix modal gallery logic
 
 ------ CHECK POINT
 - Update contact with photo, and proper dates
@@ -78,3 +74,12 @@ Complete Home page:
 
 
 
+
+Modal Gallery Logic
+4/5 height screen
+full w photo
+x to close on top
+
+-Left half goes left
+-Right half goes right
+-Transition and fade

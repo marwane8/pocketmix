@@ -17,6 +17,7 @@ export default function GalleryItem({
   const { setOpen, setImagesList } = useGalleryContext();
 
   const handleGalleryClick = () => {
+    document.body.style.overflow = "hidden"; //Stop scrolling
     setImagesList(images);
     setOpen(true);
   };
