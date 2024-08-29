@@ -9,6 +9,12 @@
   @apply border-2 border-red-500;
 }
 
+.cta-btn {
+  @apply border-2 font-sans py-1 px-4  w-fit cursor-pointer 
+  text-white hover:text-stone-100
+  border-[#b3e3ee]  bg-[#58b7d2] hover:bg-[#7fcde1];
+}
+
 .transition-base {
   @apply transition-all duration-200;
 }

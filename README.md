@@ -29,6 +29,8 @@ PORTFOLIO
 
 SERVICES
 - Design and create break downs
+NYC Materinyy 
+https://www.michaelkormos.com/_maternity-sessions/
 
 ABOUT
 - Add porfolio cover photo
@@ -65,12 +67,17 @@ Complete Home page:
 TODO:
 ------ CHECK POINT
 
-- Re Design services page
-- Attach goog location and contact forms
+- Design services page
+- Design portfolio page
+
 ----- CHECKPOINT 
-- Add small portfolio link to front padge
-- Integrate backend to change pictures.
+- Contact US page
+- Attach goog location and contact forms
+- Add Home page copy
+
+---- CHECKPOINT 
 - Add final pictures and Portfolio content.
+- Integrate backend to change pictures email forms.
 
 
 
@@ -83,3 +90,13 @@ x to close on top
 -Left half goes left
 -Right half goes right
 -Transition and fade
+
+
+notes section
+Design Sectoin - Fonts, colors, themes, inspiration to choose
+Page summary and inspirations
+Todo section - list of actions
+
+set up section
+- set call to action btn theme
+- create a component library, with 
