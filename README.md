@@ -50,6 +50,7 @@ Growing business:
 - But Sell his day to day work.
 
 DONE:
+Complete Home page:
 - Re adjust home font and logo color
 - Set transitioning heros from 3 main photos
 - Create a 3 image portfolio - TOOK 2 DAYS!!
@@ -58,13 +59,12 @@ DONE:
 - set up home grid with 7 photos:
     * expand grid to fill screen
 - fix modal gallery logic - TOOK 3 HOURS FICKERING BUG
-
+------
+- Update contact with photo, and proper dates
 
 TODO:
-Complete Home page:
-
 ------ CHECK POINT
-- Update contact with photo, and proper dates
+
 - Re Design services page
 - Attach goog location and contact forms
 ----- CHECKPOINT 

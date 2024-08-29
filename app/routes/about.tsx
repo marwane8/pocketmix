@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div className="  flex flex-col items-center lg:flex-row lg:items-end  max-w-screen-lg m-auto gap-10 my-5">
       <img
-        className="h-[500px] w-fit "
+        className="h-[500px] object-contain"
         src={profile}
         alt="Miloud holding his camera in an lushious golf course."
       />
