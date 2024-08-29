@@ -29,11 +29,11 @@ export default function ModalGallery({ initialIndex }: GalleryModalProps) {
           <ChevronLeftIcon className="mr-3 w-8 sm:w-20" />
         </button>
 
-        <div className=" bg-white p-3 sm:p-6 rounded-lg shadow-lg">
+        <div className=" bg-white p-3 sm:p-6 rounded-lg shadow-lg max-h-screen">
           <img
             src={imageList[currentIndex]}
             alt={`${currentIndex + 1}`}
-            className="w-full h-auto object-cover rounded-lg"
+            className="h-screen object-contain rounded-lg"
           />
         </div>
 

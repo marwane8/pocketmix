@@ -11,7 +11,8 @@ export default function Hero() {
   const words = ["Radiant", "Elegant", "Timeless"];
 
   const [stage, setStage] = useState(0);
-  const STAGE_TIME = 20; // seconds for each slide
+  const STAGE_TIME = 10; // seconds for each slide
+  const SWITCH_TIME = 1; // seconds for transition slide 
 
   function nextStage() {
     let newStage = stage + 1;
@@ -49,7 +50,7 @@ export default function Hero() {
                     initial="hidden"
                     animate="visible"
                     exit="hidden"
-                    transition={{ duration: 3 }}
+                    transition={{ duration: SWITCH_TIME }}
                     className={classNames(
                       "absolute font-gwendy font-extrabold text-6xl md:text-7xl 2xl:translate-y-2",
                       stage == 0 && " text-[#D39470] translate-x-1",
@@ -78,7 +79,7 @@ export default function Hero() {
             animate="visible"
             exit="hidden"
             style={{ backgroundImage: `url(${images[stage]})` }}
-            transition={{ duration: 3 }}
+            transition={{ duration: SWITCH_TIME }}
             className={classNames(
               "absolute overflow-visible h-full bg-cover bg-no-repeat",
               stage == 0 && hero1ImgCSS,
