@@ -20,7 +20,7 @@ export default function ServiceCard({
         </h3>
       </div>
 
-      <div className="flex h-5/6">
+      <div className="flex h-4/6">
         <div className="flex flex-col justify-evenly">
           <h3 className="text-3xl font-bold">$ {price}</h3>
           {featureList && (
@@ -32,9 +32,6 @@ export default function ServiceCard({
               ))}
             </ul>
           )}
-          <div className="my-3 flex">
-            <button className="cta-btn">BOOK TODAY</button>
-          </div>
         </div>
         {image && (
           <img
@@ -43,6 +40,9 @@ export default function ServiceCard({
             alt={title}
           />
         )}
+      </div>
+      <div className="mb-5 flex h-1/6">
+        <button className="cta-btn">BOOK TODAY</button>
       </div>
     </div>
   );

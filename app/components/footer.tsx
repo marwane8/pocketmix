@@ -7,7 +7,7 @@ export default function Footer() {
       <Container>
         <div className="m-auto flex flex-col">
           <img
-            className="h-12 md:h-16 w-auto m-auto"
+            className="h-12 md:h-14 w-auto m-auto"
             src={trumpy}
             alt="A stick figure Logo of a peaceful trumpet player"
           />

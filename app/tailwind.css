@@ -10,8 +10,8 @@
 }
 
 .cta-btn {
-  @apply border-2 font-sans py-1 px-4  w-fit cursor-pointer 
-  text-white hover:text-stone-100
+  @apply border-2 font-sans py-1 px-4 h-fit w-fit cursor-pointer
+  text-white hover:text-stone-100 font-semibold
   border-[#b3e3ee]  bg-[#58b7d2] hover:bg-[#7fcde1];
 }
 

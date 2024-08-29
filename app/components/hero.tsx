@@ -38,7 +38,7 @@ export default function Hero() {
   return (
     <>
       <div className="h-screen-svh relative overflow-hidden">
-        <div className="h-full bg-black absolute z-10 w-screen bg-opacity-35">
+        <div className="h-4/5 bg-black absolute z-10 w-screen bg-opacity-35">
           <div className="text-neutral text-[2.3em] md:text-6xl md:py-10 2xl:text-7xl text-left h-1/6  flex">
             <div className="m-auto w-screen px-5">
               <h1 className="  m-auto font-semibold">Capture Life&apos;s </h1>
@@ -81,7 +81,7 @@ export default function Hero() {
             style={{ backgroundImage: `url(${images[stage]})` }}
             transition={{ duration: SWITCH_TIME }}
             className={classNames(
-              "absolute overflow-visible h-full bg-cover bg-no-repeat",
+              "absolute overflow-visible h-4/5 bg-cover bg-no-repeat",
               stage == 0 && hero1ImgCSS,
               stage == 1 && hero2ImgCSS,
               stage == 2 && hero3ImgCSS

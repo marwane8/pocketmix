@@ -19,7 +19,7 @@ export default function Gallery() {
 
   return (
     <>
-      <div className="sm:grid gap-8 m-8  grid-rows-8 sm:grid-cols-2  lg:grid-cols-3   max-w-screen-2xl 2xl:mx-auto">
+      <div className="grid gap-8 m-8  grid-rows-8 sm:grid-cols-2  lg:grid-cols-3   max-w-screen-2xl 2xl:mx-auto">
         <GalleryContext.Provider
           value={{
             imageList: images,

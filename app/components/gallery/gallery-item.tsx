@@ -1,5 +1,7 @@
-import { useInView } from "react-intersection-observer";
 import { useGalleryContext } from "./gallery-context";
+import { classNames } from "~/utils/js.util";
+import { motion, useInView } from "framer-motion"; // Import framer-motion
+import { useRef } from "react";
 
 type GalleryItemProps = {
   face: string;
@@ -16,8 +18,10 @@ export default function GalleryItem({
   imageIndex,
   className,
 }: GalleryItemProps) {
-  const { setOpen, setImagesList, setCurrentIndex } = useGalleryContext();
+  const ref = useRef(null);
+  const isInView = useInView(ref);
 
+  const { setOpen, setImagesList, setCurrentIndex } = useGalleryContext();
   const handleGalleryClick = () => {
     document.body.style.overflow = "hidden"; //Stop scrolling
     setImagesList(images);
@@ -27,18 +31,15 @@ export default function GalleryItem({
     setOpen(true);
   };
 
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1, // Adjust this to control when the animation starts
-  });
-
   return (
-    <div
+    <motion.div
       ref={ref}
-      className={`my-8 sm:my-0 max-h-[700px]  sm:max-h-[1000px] relative cursor-pointer overflow-hidden transition-opacity duration-500 ease-in-out
-        ${className} ${inView ? "opacity-100" : "opacity-0"}`}
+      className={classNames("relative cursor-pointer", className)}
       onClick={() => handleGalleryClick()}
       aria-hidden
+      initial={{ opacity: 0 }}
+      animate={{ opacity: isInView ? 1 : 0 }}
+      transition={{ duration: 0.5 }} // Adjust duration as needed
     >
       <img
         src={face}
@@ -46,11 +47,7 @@ export default function GalleryItem({
         // className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
         className="h-full w-full object-cover"
       />
-      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100">
-        <h3 className="text-white text-xl font-bold tracking-wider">
-          {title && title.toUpperCase()}
-        </h3>
-      </div>
-    </div>
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100" />
+    </motion.div>
   );
 }
