@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Modal from "../modal";
 import { useGalleryContext } from "./gallery-context";
 import {
@@ -8,8 +9,8 @@ import {
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function ModalGallery() {
-  const { open, setOpen, imageList, currentIndex, setCurrentIndex } =
-    useGalleryContext();
+  const { open, setOpen, imageList } = useGalleryContext();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
     const nextIndex = (currentIndex + 1) % imageList.length;
@@ -27,8 +28,8 @@ export default function ModalGallery() {
   };
 
   const slideVariant = {
-    visible: { opacity: [0, 0, 0, 1] },
-    hidden: { opacity: [1,0,0,0] },
+    visible: { opacity: [0, 0, 1, 1] },
+    hidden: { opacity: [1, 0, 0, 0] },
   };
 
   return (
