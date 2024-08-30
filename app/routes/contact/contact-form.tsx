@@ -36,11 +36,12 @@ export default function FormTemplate() {
   return (
     <div className="m-5 max-w-screen-lg md:mx-auto">
       <div className="text-2xl text-center">
-        <h2 className=" font-playfair_d text-3xl font-semibold my-1">
-          {" "}
-          CONTACT US{" "}
+        <h2 className=" font-playfair_d md:text-3xl font-semibold md:my-1">
+          CONTACT US
         </h2>
-        <h2 className="text-xl tracking-tighter"> MILOUD PHOTOGRAPHY </h2>
+        <h2 className="text-lg md:text-xl tracking-tighter">
+          MILOUD PHOTOGRAPHY
+        </h2>
         <h4 className="font-sans font-thin text-base">
           30-10 34th St, Astoria, NY 11103
         </h4>

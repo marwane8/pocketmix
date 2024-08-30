@@ -93,17 +93,16 @@ export default function Hero() {
           <div className="h-4/5" />
           <div className="h-1/5 flex items-center">
             <div className="md:m-auto mx-5">
-              <p className="text-xl md:text-3xl max-w-screen-lg m-auto text-center font-playfair_d">
+              <p className="text-lg md:text-3xl max-w-screen-lg m-auto text-center font-playfair_d">
                 <span className=" font-extrabold">
-                  Full-Service Photography Studio
+                  Full-Service Photography
                 </span>{" "}
-                in Astoria, New York. Including intimate portraits, candid
-                lifestyle shoots, and event coverage.
+                in Astoria, NYC.
               </p>
               <div className="py-3">
                 <Link to={"/contact"}>
                   <div className="cta-btn m-auto w-fit md:text-xl">
-                    BOOK AN APPOINTMENT
+                    BOOK TODAY
                   </div>
                 </Link>
               </div>
