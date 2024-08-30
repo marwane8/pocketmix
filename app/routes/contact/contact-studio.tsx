@@ -22,10 +22,10 @@ export default function ContactStudio() {
           className="h-full w-full  object-cover"
         />
       </div>
-      <div className="border bg-accent h-full border-secondary max-w-screen-lg m-auto text-center p-3 my-10">
+      <div className="border bg-accent h-full border-secondary max-w-screen-lg mx-5 md:mx-auto text-center p-3 my-10">
         <h1 className="text-2xl">Vist our Studio</h1>
         <h1 className="text-2xl font-extrabold">30-10 34th St, Astoria, NYC</h1>
-        <p className="text-lg m-auto max-w-4xl font-thin py-3">
+        <p className=" md:text-lg m-auto max-w-4xl font-thin py-3">
           We welcome you to our cozy Astoria studio, conveniently located near
           the N/W trains. With nearby street parking, your visit will be as
           effortless as it is inspiring, all within the heart of this vibrant,

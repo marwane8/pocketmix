@@ -91,3 +91,6 @@ Todo section - list of actions
 set up section
 - set call to action btn theme
 - create a component library, with 
+
+
+Full-service photography studio in Astoria, New York. Offering a broad range of photography services, from intimate portraits to candid lifestyle shoots and event coverage.
