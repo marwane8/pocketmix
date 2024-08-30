@@ -5,19 +5,19 @@ import studio from "../../assets/studio.jpg";
 export default function ContactStudio() {
   return (
     <>
-      <div className="w-screen flex gap-5">
+      <div className="w-screen flex gap-5 h-32 md:h-60">
         <div className="w-full">
           <img
-            className="object-cover object-bottom h-full"
+            className="object-cover object-bottom h-full w-full"
             src={redshirt}
             alt="man sitting down"
           />
         </div>
         <div className="w-full">
-          <img src={seating} alt="man sitting down" className=" object-cover h-full" />
+          <img src={seating} alt="man sitting down" className=" object-cover h-full w-full" />
         </div>
         <div className="w-full">
-          <img src={studio} alt="studio" className=" object-cover h-full" />
+          <img src={studio} alt="studio" className=" object-cover h-full w-full" />
         </div> 
       </div>
       <div className="border bg-accent h-full border-secondary max-w-screen-lg mx-5 md:mx-auto text-center p-3 my-10">

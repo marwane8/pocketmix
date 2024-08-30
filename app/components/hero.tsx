@@ -5,7 +5,6 @@ import hero1 from "../assets/hero_1.jpg";
 import hero2 from "../assets/hero_3.jpg";
 import hero3 from "../assets/hero_2.jpg";
 import { classNames } from "~/utils/js.util";
-import { Link } from "@remix-run/react";
 
 export default function Hero() {
   const images = [hero1, hero2, hero3];
@@ -89,26 +88,6 @@ export default function Hero() {
             )}
           />
         </AnimatePresence>
-        <div className="flex flex-col h-full bg-accent">
-          <div className="h-4/5" />
-          <div className="h-1/5 flex items-center">
-            <div className="md:m-auto mx-5">
-              <p className="text-lg md:text-3xl max-w-screen-lg m-auto text-center font-playfair_d">
-                <span className=" font-extrabold">
-                  Full-Service Photography
-                </span>{" "}
-                in Astoria, NYC.
-              </p>
-              <div className="py-3">
-                <Link to={"/contact"}>
-                  <div className="cta-btn m-auto w-fit md:text-xl">
-                    BOOK TODAY
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </>
   );
