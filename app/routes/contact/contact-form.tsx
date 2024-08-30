@@ -1,12 +1,11 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useParams, useSubmit } from "@remix-run/react";
+import { useSubmit } from "@remix-run/react";
 import { SubmitHandler, useForm, FormProvider } from "react-hook-form";
 import { z } from "zod";
 import InputField from "~/components/forms/input-field";
 import InputSelect from "~/components/forms/input-select";
 
 export default function FormTemplate() {
-  const params = useParams();
   const submit = useSubmit();
 
   const eventTypes = ["Select an Event...", "Wedding", "Party", "Other"];

@@ -1,4 +1,4 @@
-import flowerWall from "../assets/flower-wall.jpg";
+import flowerWall from "../assets/flower-blur.jpg";
 import ContactForm from "./contact/contact-form";
 import ContactStudio from "./contact/contact-studio";
 

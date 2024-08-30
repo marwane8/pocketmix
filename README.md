@@ -93,4 +93,16 @@ set up section
 - create a component library, with 
 
 
-Full-service photography studio in Astoria, New York. Offering a broad range of photography services, from intimate portraits to candid lifestyle shoots and event coverage.
+Full-service photography studio in Astoria, New York,
+
+ blending artistic vision with technical expertise to capture your unique moments and turn them into timeless memories."
+
+
+
+Offering a broad range of photography services, from intimate portraits and candid lifestyle shoots to event coverage. Whatever your photography needs, My goal is to capture them with creativity and precision.
+
+
+Event Photography: "Relive Every Moment with Stunning Event Photography."
+Studio and Head Shots "Present Your Best Self with Professional Studio and Head Shots."
+
+Passport and Photo Restorations: "Perfectly Restored Memories and Flawless Passport Photos."

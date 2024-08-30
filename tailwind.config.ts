@@ -17,6 +17,7 @@ export default {
       },
     },
     fontFamily: {
+      verdana: ["Verdana", "sans-serif"],
       playfair: ["Playfair", "system-ui"],
       playfair_d: ["Playfair Display", "serif"],
       gwendy: ["Gwendolyn", "cursive"],

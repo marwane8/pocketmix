@@ -1,8 +1,6 @@
-import { useParams } from "@remix-run/react";
 import PortfolioGallery from "~/components/portfolio-gallery";
 
 export default function PortfolioEvent() {
-  const { event } = useParams();
   return (
     <div className="my-10 max-w-screen-md m-auto">
       <h1 className="text-3xl text-center my-5 font-playfair_d">

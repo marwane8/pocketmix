@@ -5,6 +5,7 @@ import hero1 from "../assets/hero_1.jpg";
 import hero2 from "../assets/hero_3.jpg";
 import hero3 from "../assets/hero_2.jpg";
 import { classNames } from "~/utils/js.util";
+import { Link } from "@remix-run/react";
 
 export default function Hero() {
   const images = [hero1, hero2, hero3];
@@ -89,6 +90,32 @@ export default function Hero() {
           />
         </AnimatePresence>
       </div>
+      <div className="flex flex-col h-60">
+        <div className="flex items-center m-auto">
+          <div className="md:m-auto mx-5">
+            <p className="text-xl md:text-3xl max-w-screen-lg py-3 mx-auto text-center font-playfair_d">
+              <span className=" font-extrabold">
+                Full-Service Photography Studio
+              </span>{" "}
+              in Astoria, NYC
+            </p>
+            <p className="text-center my-2 md:text-xl max-w-screen-md font-playfair_d">
+              From intimate portraits and candid lifestyle shoots to event
+              coverage. Whatever your photography needs, My goal is to capture
+              them with creativity and precision.
+            </p>
+            <div className="my-5">
+
+              <Link to={"/contact"}>
+                <div className="cta-btn m-auto w-fit md:text-xl">
+                  BOOK AN APPOINTMENT
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="h-60" />
     </>
   );
 }
