@@ -63,33 +63,24 @@ Complete Home page:
 - fix modal gallery logic - TOOK 3 HOURS FICKERING BUG
 ------
 - Update contact with photo, and proper dates
-
-TODO:
------- CHECK POINT
-
 - Design services page
 - Design portfolio page
+------ CHECK POINT
+
+
+TODO:
 
 ----- CHECKPOINT 
 - Contact US page
 - Attach goog location and contact forms
-- Add Home page copy
+- Add Home page copy and Page Switches
 
 ---- CHECKPOINT 
 - Add final pictures and Portfolio content.
 - Integrate backend to change pictures email forms.
 
-
-
-
-Modal Gallery Logic
-4/5 height screen
-full w photo
-x to close on top
-
--Left half goes left
--Right half goes right
--Transition and fade
+testimonials - https://dribbble.com/shots/23280260-Testimonials-Reviews-Section
+grace made faqs -
 
 
 notes section

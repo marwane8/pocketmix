@@ -17,7 +17,7 @@ export default function SideNav() {
         open ? "fixed" : "hidden"
       )}
     >
-      <ul className="p-2 h-80 translate-y-20 flex flex-col justify-center animate-drop" >
+      <ul className="p-2 h-80 flex flex-col justify-center animate-drop" >
         {navLinks.map((item, i) => (
           <li key={i} className="py-1 text-center my-3">
             <Link

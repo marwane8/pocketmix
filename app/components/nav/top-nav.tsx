@@ -67,7 +67,7 @@ export default function TopNav() {
             >
               <li
                 className={classNames(
-                  "py-1 text-xl font-playfair mx-5 min-w-24 text-center transition-base hover:font-extrabold",
+                  "py-1 text-xl font-playfair mx-2 min-w-24 text-center transition-base hover:font-extrabold",
                   item.name === path
                     ? "text-secondary font-extrabold underline underline-offset-4"
                     : " hover:text-stone-600 font-semibold"

@@ -5,16 +5,46 @@
 @tailwind components;
 @tailwind utilities;
 
-.dbug {
-  @apply border-2 border-red-500;
-}
+/* Style Classes */
 
 .cta-btn {
-  @apply border-2 font-sans py-1 px-4 h-fit w-fit cursor-pointer
+  @apply border-2 font-sans py-1 px-4 h-fit cursor-pointer
   text-white hover:text-stone-100 font-semibold
   border-[#b3e3ee]  bg-[#58b7d2] hover:bg-[#7fcde1];
 }
 
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 33.33%;
+  position: relative;
+  height: 0;
+
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+}
+
+.input {
+  @apply rounded-sm bg-stone-100 border-stone-400;
+}
+
+.select {
+  @apply rounded-sm bg-stone-100 border-stone-400;
+}
+
+.textarea {
+  @apply rounded-sm bg-stone-100 border-stone-400;
+}
+
+
+
+/* Transition Classes */
 .transition-base {
   @apply transition-all duration-200;
 }
@@ -23,16 +53,21 @@
   @keyframes dropIn {
     0% {
       opacity: 0;
-      transform: translateY(70px);
+      transform: translateY(80px);
     }
 
     100% {
       opacity: 1;
-      transform: translateY(80px);
+      transform: translateY(100px);
     }
   }
 
   .animate-drop {
     animation: dropIn 0.3s ease forwards;
   }
+}
+
+/* Dev Classes */
+.dbug {
+  @apply border-2 border-red-500;
 }
