@@ -5,7 +5,7 @@ export default function PortfolioEvent() {
   const { event } = useParams();
   return (
     <div className="my-10 max-w-screen-md m-auto">
-      <h1 className="text-3xl font-bold text-center my-5">
+      <h1 className="text-3xl text-center my-5 font-playfair_d">
         Grace&apos;s Wedding
       </h1>
       <p className="max-w-screen-sm m-auto mx-5 text-lg my-5">

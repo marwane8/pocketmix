@@ -36,7 +36,7 @@ export default function FormTemplate() {
   return (
     <div className="m-5 max-w-screen-lg md:mx-auto">
       <div className="text-2xl text-center">
-        <h2 className="text-3xl tracking-wide  font-extrabold my-1">
+        <h2 className=" font-playfair_d text-3xl font-semibold my-1">
           {" "}
           CONTACT US{" "}
         </h2>

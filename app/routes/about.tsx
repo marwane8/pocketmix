@@ -10,7 +10,9 @@ export default function About() {
       />
 
       <div className="flex flex-col gap-5 text-lg max-w-screen-sm mx-5">
-        <h1 className="text-4xl font-bold text-center">Miloud</h1>
+        <h1 className="text-4xl font-bold text-center font-playfair_d">
+          Miloud
+        </h1>
         <h2>
           I&apos;M MILOUD, A MOROCCAN AMERICAN EVENTS AND TRAVEL PHOTOGRAPHER
           BASED IN ASTORISIA, QUEENS NY.

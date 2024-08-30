@@ -18,6 +18,7 @@ export default {
     },
     fontFamily: {
       playfair: ["Playfair", "system-ui"],
+      playfair_d: ["Playfair Display", "serif"],
       gwendy: ["Gwendolyn", "cursive"],
       sans: ["Gill Sans", "system-ui"],
     },

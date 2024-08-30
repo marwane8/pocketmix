@@ -41,8 +41,8 @@ export default function Hero() {
       <div className="h-screen-svh relative overflow-hidden">
         <div className="h-4/5 bg-black absolute z-10 w-screen bg-opacity-35">
           <div className="text-neutral text-[2.3em] md:text-6xl md:py-10 2xl:text-7xl text-left h-1/6  flex">
-            <div className="m-auto w-screen px-5">
-              <h1 className="  m-auto font-semibold">Capture Life&apos;s </h1>
+            <div className="m-auto w-screen px-5 font-playfair_d">
+              <h1 className="  m-auto">Capture Life&apos;s </h1>
               <div className="relative w-fit flex">
                 <AnimatePresence>
                   <motion.h1
@@ -62,7 +62,7 @@ export default function Hero() {
                     {words[stage]}
                   </motion.h1>
                 </AnimatePresence>
-                <h1 className="text-right m-auto font-semibold flex translate-y-2">
+                <h1 className="text-right m-auto flex translate-y-2">
                   <p className="opacity-0 w-[200px] md:w-[240px] bg-primary">
                     {words[stage]}
                   </p>
@@ -93,14 +93,14 @@ export default function Hero() {
           <div className="h-4/5" />
           <div className="h-1/5 flex items-center">
             <div className="md:m-auto mx-5">
-              <p className="text-xl md:text-3xl max-w-screen-lg m-auto text-center">
+              <p className="text-xl md:text-3xl max-w-screen-lg m-auto text-center font-playfair_d">
                 <span className=" font-extrabold">
                   Full-Service Photography Studio
                 </span>{" "}
                 in Astoria, New York. Including intimate portraits, candid
                 lifestyle shoots, and event coverage.
               </p>
-              <div className="translate-y-4">
+              <div className="py-3">
                 <Link to={"/contact"}>
                   <div className="cta-btn m-auto w-fit md:text-xl">
                     BOOK AN APPOINTMENT

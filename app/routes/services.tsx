@@ -10,7 +10,7 @@ export default function Services() {
         alt="3 rings next to each other"
         className=" object-cover w-full h-60 md:h-96 object-center"
       />
-      <h1 className="text-2xl md:text-3xl text-center font-bold py-5">
+      <h1 className="text-2xl md:text-3xl text-center font-semibold py-5 font-playfair_d">
         NYC PHOTOGRAPHY SERVICES
       </h1>
 

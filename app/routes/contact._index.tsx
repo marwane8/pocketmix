@@ -11,7 +11,7 @@ export default function Contact() {
         style={{ backgroundImage: `url(${flowerWall})` }}
       >
         <div className="w-full h-full bg-black bg-opacity-40 text-neutral text-4xl flex flex-col justify-center text-center">
-          <h1 className="font-extrabold text-5xl">
+          <h1 className="font-playfair_d font-semibold text-5xl">
             Book A Free Consultation Today!
           </h1>
           <h3 className=" font-extralight text-yellow-300">

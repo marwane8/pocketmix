@@ -13,7 +13,7 @@ export default function PortfolioCard() {
           />
         </div>
       </Link>
-      <h2 className="font-semibold"> Grace&apos;s Wedding </h2>
+      <h2 className="font-semibold font-playfair_d"> Grace&apos;s Wedding </h2>
       <h3 className=" font-thin text-stone-500 text-base"> WEDDINGS </h3>
     </div>
   );
