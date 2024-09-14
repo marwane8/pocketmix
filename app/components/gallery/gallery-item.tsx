@@ -4,15 +4,13 @@ import { motion, useInView } from "framer-motion"; // Import framer-motion
 import { useRef } from "react";
 
 type GalleryItemProps = {
-  face: string;
   title?: string;
   images: string[]; // Add this prop to handle the gallery images
   className?: string;
-  imageIndex?: number;
+  imageIndex: number;
 };
 
 export default function GalleryItem({
-  face,
   title,
   images,
   imageIndex,
@@ -39,10 +37,10 @@ export default function GalleryItem({
       aria-hidden
       initial={{ opacity: 0 }}
       animate={{ opacity: isInView ? 1 : 0 }}
-      transition={{ duration: 0.5 }} // Adjust duration as needed
+      transition={{ duration: .75, delay: .15 }} // Adjust duration as needed
     >
       <img
-        src={face}
+        src={images[imageIndex]}
         alt={title}
         // className="w-full h-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-110"
         className="h-full w-full object-cover"

@@ -1,7 +1,6 @@
 # pocketmix 
 Light weight app used for small businesses
 
-
 MILOUD PHOTOGRAPHY
 
 Colors:
@@ -22,20 +21,6 @@ onts:
 
 
 HOME 
-- Set Transitioning Heros
-
-PORTFOLIO
-- Set up 3 item portfolio functionality
-
-SERVICES
-- Design and create break downs
-NYC Materinyy 
-https://www.michaelkormos.com/_maternity-sessions/
-
-ABOUT
-- Add porfolio cover photo
-- And poster
-
 Functions: 
 Hero
 Gallery
@@ -65,44 +50,25 @@ Complete Home page:
 - Update contact with photo, and proper dates
 - Design services page
 - Design portfolio page
------- CHECK POINT
-
-
-TODO:
-
------ CHECKPOINT 
+------ 
 - Contact US page
 - Attach goog location and contact forms
 - Add Home page copy and Page Switches
-
----- CHECKPOINT 
-- Add final pictures and Portfolio content.
-- Integrate backend to change pictures email forms.
-
-testimonials - https://dribbble.com/shots/23280260-Testimonials-Reviews-Section
-grace made faqs -
-
-
-notes section
-Design Sectoin - Fonts, colors, themes, inspiration to choose
-Page summary and inspirations
-Todo section - list of actions
-
-set up section
-- set call to action btn theme
-- create a component library, with 
-
-
-Full-service photography studio in Astoria, New York,
-
- blending artistic vision with technical expertise to capture your unique moments and turn them into timeless memories."
+- Make a list of important content needed 
+- Set up Meeting to get final content and create business accounts
 
 
 
-Offering a broad range of photography services, from intimate portraits and candid lifestyle shoots to event coverage. Whatever your photography needs, My goal is to capture them with creativity and precision.
+TODO:
+- Optimize photos and upload content.
+- Fix SEO and final page details
+- Set up business account to hold website
+- Visit miloud to implement send email logic.
+
+- Outline configurable content and implement dynamic backend
 
 
-Event Photography: "Relive Every Moment with Stunning Event Photography."
-Studio and Head Shots "Present Your Best Self with Professional Studio and Head Shots."
-
-Passport and Photo Restorations: "Perfectly Restored Memories and Flawless Passport Photos."
+- set up front page grid, 
+- Implement 3 galleries
+- optimize miloud photo
+- Fix profile text, and gallery texy

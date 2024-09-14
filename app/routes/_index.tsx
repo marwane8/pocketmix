@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
-import Gallery from "~/components/gallery/gallery";
+import HomeGallery from "~/components/home-gallery";
 import Hero from "../components/hero";
 
 export const meta: MetaFunction = () => {
@@ -13,7 +13,7 @@ export default function Index() {
   return (
     <div>
       <Hero />
-      <Gallery />
+      <HomeGallery />
     </div>
   );
 }
