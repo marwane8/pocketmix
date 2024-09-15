@@ -1,5 +1,4 @@
-import ring from "~/assets/ring.jpg";
-import bride1 from "~/assets/bride1.jpg";
+import ring from "~/assets/stock/ring.jpg";
 import ServiceCard from "~/components/service-card";
 
 export default function Services() {
@@ -23,7 +22,6 @@ export default function Services() {
             "Solo, Couples, Family Photos",
             "High-resolution edited Digital Portaits",
           ]}
-          image={bride1}
         />
         <ServiceCard
           title="Parties"

@@ -1,5 +1,5 @@
 import Container from "./container";
-import trumpy from "../assets/trumpy.png";
+import trumpy from "../assets/company/trumpy.png";
 
 export default function Footer() {
   return (

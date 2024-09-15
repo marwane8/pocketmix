@@ -1,20 +1,17 @@
-import PortfolioGallery from "~/components/portfolio-gallery";
+import { useParams } from "@remix-run/react";
+import ItalianWeddingGallery from "~/components/galleries/italian-wedding";
+import NYWeddingGallery from "~/components/galleries/ny-wedding";
+import Sweet16Gallery from "~/components/galleries/sweet-16";
 
 export default function PortfolioEvent() {
+  const params = useParams();
+  const { event } = params;
+
   return (
-    <div className="my-10 max-w-screen-md m-auto">
-      <h1 className="text-3xl text-center my-5 font-playfair_d">
-        Grace&apos;s Wedding
-      </h1>
-      <p className="max-w-screen-sm m-auto mx-5 text-lg my-5">
-        I had the joy of photographing a beautiful wedding in Brooklyn, and it
-        was truly a memorable experience. The couple’s love radiated through
-        every shot, and Brooklyn’s unique blend of urban charm and romance
-        provided the perfect setting. This session felt like everything just
-        fell into place, with each frame capturing the essence of the city and
-        the couple’s connection.
-      </p>
-      <PortfolioGallery />
-    </div>
+    <>
+      {event == "ny-wedding" && <NYWeddingGallery />}
+      {event == "italian-wedding" && <ItalianWeddingGallery />}
+      {event == "sweet-16" && <Sweet16Gallery />}
+    </>
   );
 }

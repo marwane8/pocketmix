@@ -1,7 +1,7 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "@remix-run/react";
 
-import logo from "~/assets/miloud_logo.png";
+import logo from "~/assets/company/logo.png";
 import { classNames } from "~/utils/js.util";
 
 import { navLinks, useNavContext } from "./nav-context";
