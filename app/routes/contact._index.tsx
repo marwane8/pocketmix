@@ -1,6 +1,18 @@
+import { MetaFunction } from "@remix-run/react";
 import flowerWall from "../assets/stock/flower-blur.jpg";
 import ContactForm from "./contact/contact-form";
 import ContactStudio from "./contact/contact-studio";
+
+export const meta: MetaFunction= () => {
+  return [
+    { title: "Contact | Miloud Photography" },
+    {
+      name: "Miloud Photography Contact Page",
+      content:
+        "Contact form for booking an appointment for Miloud Photography Services in Astoria New York."
+    },
+  ];
+}
 
 export default function Contact() {
   const currentYear = new Date().getFullYear();

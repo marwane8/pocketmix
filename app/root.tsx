@@ -2,6 +2,7 @@ import {
   ClientLoaderFunctionArgs,
   Links,
   Meta,
+  MetaFunction,
   Outlet,
   Scripts,
   ScrollRestoration,
@@ -13,6 +14,17 @@ import "./tailwind.css";
 import Navbar from "./components/nav/navbar";
 import Footer from "./components/footer";
 import Container from "./components/container";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Miloud Photography" },
+    {
+      name: "Miloud Photography",
+      content:
+        "Full-Service Photography Studio in Astoria, New York for Weddings, Engagements, Social Events, and Passport Photos",
+    },
+  ];
+};
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -43,7 +55,7 @@ export default function App() {
   return (
     <div className="h-screen-svh">
       <Navbar path={path} />
-      <div className="h-20"/> 
+      <div className="h-20" />
       <div>
         <Outlet />
       </div>

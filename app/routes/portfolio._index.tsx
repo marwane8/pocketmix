@@ -1,8 +1,20 @@
+import { MetaFunction } from "@remix-run/react";
 import PortfolioCard from "~/components/portfolio-card";
 
-import pier from "~/assets/ny-wedding/0w-pier.jpg"
+import pier from "~/assets/ny-wedding/0w-pier.jpg";
 import sunset from "~/assets/italian-wedding/1w-sunset.jpg";
 import sunset16 from "~/assets/sweet-16/1w-sunset.jpg";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Porfolio | Miloud Photography" },
+    {
+      name: "Miloud Photography Portfolio",
+      content:
+        "Galleries of New York Weddings, Italian Weddings, and Celebration Events in Astoria NYC.",
+    },
+  ];
+};
 
 export default function Portfolio() {
   return (
@@ -25,9 +37,6 @@ export default function Portfolio() {
         link="sweet-16"
         image={sunset16}
       />
-
-
-
     </div>
   );
 }

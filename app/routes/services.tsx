@@ -1,5 +1,17 @@
+import { MetaFunction } from "@remix-run/react";
 import ring from "~/assets/stock/ring.jpg";
 import ServiceCard from "~/components/service-card";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Services | Miloud Photography" },
+    {
+      name: "Miloud Photography Services",
+      content:
+        "Pricing pages of Wedding Services, Passport Photgraphy Services, Event Services, and Studio Photography Services in Astoria, New York"
+    },
+  ];
+}
 
 export default function Services() {
   return (

@@ -1,4 +1,16 @@
+import { MetaFunction } from "@remix-run/react";
 import profile from "~/assets/company/profile.jpg";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "About | Miloud Photography" },
+    {
+      name: "Miloud Photography About Page",
+      content:
+        "Life story of Miloud I'M MILOUD, A MOROCCAN AMERICAN EVENTS AND TRAVEL PHOTOGRAPHER BASED IN ASTORISIA, QUEENS NY.",
+    },
+  ];
+};
 
 export default function About() {
   return (

@@ -4,8 +4,12 @@ import Hero from "../components/hero";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix SPA" },
-    { name: "description", content: "Welcome to Remix (SPA Mode)!" },
+    { title: "Miloud Photography" },
+    {
+      name: "Miloud Photography Home Page",
+      content:
+        "Full-Service Photography Studio in Astoria, New York for Weddings, Engagements, Social Events, and Passport Photos",
+    },
   ];
 };
 
