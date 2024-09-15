@@ -14,14 +14,15 @@ import "./tailwind.css";
 import Navbar from "./components/nav/navbar";
 import Footer from "./components/footer";
 import Container from "./components/container";
+import { schemaMarkup } from "./utils/js.util";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Miloud Photography" },
     {
-      name: "Miloud Photography",
-      content:
+      title: "Miloud Photography",
+      description:
         "Full-Service Photography Studio in Astoria, New York for Weddings, Engagements, Social Events, and Passport Photos",
+      "script:ld+json": schemaMarkup,
     },
   ];
 };
@@ -34,6 +35,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        <script type="application/ld+json"></script>
       </head>
       <body className="bg-neutral text-stone-900 font-playfair">
         {children}
